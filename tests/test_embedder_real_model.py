@@ -22,15 +22,23 @@ from hh_radar.rag.embedder import cosine_similarity, get_embedder, reset_embedde
 
 pytestmark = pytest.mark.embeddings
 
+#: Без extra rag пакета fastembed в окружении нет — так собран CI, где эти
+#: тесты и не должны выполняться. Пропуск объявлен на уровне модуля, потому
+#: что get_embedder грузит модель лениво: до первого вызова embed_* он
+#: возвращает объект без единой попытки импорта, и ошибка вылезала бы уже
+#: внутри теста, мимо любой обработки в фикстуре.
+pytest.importorskip("fastembed", reason="нужен extra rag: uv sync --extra rag")
+
 
 @pytest.fixture
 def embedder() -> object:
     reset_embedder_cache()
-    settings = Settings(embedding_backend="fastembed")
+    loaded = get_embedder(Settings(embedding_backend="fastembed"))
     try:
-        return get_embedder(settings)
-    except Exception as exc:  # pragma: no cover — нет сети и нет кэша модели
+        loaded.embed_query("проверка доступности модели")
+    except Exception as exc:  # pragma: no cover — нет сети и модель не скачана
         pytest.skip(f"модель недоступна: {exc}")
+    return loaded
 
 
 def test_dimension_matches_the_database_column(embedder) -> None:  # type: ignore[no-untyped-def]
