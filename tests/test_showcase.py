@@ -17,11 +17,9 @@ from hh_radar.showcase.render import (
     BarRow,
     TimePoint,
     experience_label,
-    format_count,
-    format_money,
-    plural_ru,
     render_page,
 )
+from hh_radar.text import NBSP, format_count, format_money, plural_ru
 
 
 def _page(**overrides: object) -> str:
@@ -122,7 +120,7 @@ class TestSampleDataWarning:
     def test_warns_when_the_database_is_tiny(self) -> None:
         page = _page(vacancies_total=4)
         assert "демонстрационные данные" in page
-        assert "4 вакансии" in page
+        assert f"4{NBSP}вакансии" in page or "4 вакансии" in page
 
     def test_no_warning_on_a_real_dataset(self) -> None:
         page = _page(vacancies_total=MIN_MEANINGFUL_VACANCIES)
@@ -130,14 +128,15 @@ class TestSampleDataWarning:
 
 
 class TestFormatting:
-    def test_money_uses_thin_grouping_and_ruble_sign(self) -> None:
-        assert format_money(150000) == "150 000 ₽"
+    def test_money_groups_digits_with_a_non_breaking_space(self) -> None:
+        """Обычный пробел позволил бы перенести строку посреди числа."""
+        assert format_money(150000) == f"150{NBSP}000{NBSP}₽"
 
     def test_money_none_is_a_dash_not_zero(self) -> None:
         assert format_money(None) == "—"
 
     def test_count_grouping(self) -> None:
-        assert format_count(1200) == "1 200"
+        assert format_count(1200) == f"1{NBSP}200"
 
     @pytest.mark.parametrize(
         ("raw", "expected"),

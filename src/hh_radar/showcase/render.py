@@ -23,6 +23,8 @@ import json
 from dataclasses import dataclass
 from datetime import datetime
 
+from hh_radar.text import format_count, format_money, plural_ru
+
 # Токены палитры. Светлые и тёмные значения — не автоматическая инверсия,
 # а подобранные под каждую подложку шаги одних и тех же оттенков.
 LIGHT = {
@@ -53,6 +55,18 @@ DARK = {
     "warn-bg": "#2b2118",
     "warn-line": "#5a3f27",
 }
+
+#: Реэкспорт: витрина исторически была единственным потребителем
+#: форматирования, и импорты из неё уже разошлись по проекту.
+__all__ = [
+    "BarRow",
+    "TimePoint",
+    "experience_label",
+    "format_count",
+    "format_money",
+    "plural_ru",
+    "render_page",
+]
 
 REPO_URL = "https://github.com/Denmurzik/hh-radar"
 
@@ -187,22 +201,6 @@ def render_page(
 
 
 # ------------------------------------------------------------------ блоки --
-
-
-def plural_ru(count: int, one: str, few: str, many: str) -> str:
-    """Русское склонение числительных.
-
-    «4 вакансий» в шапке витрины читается как небрежность, а витрина —
-    первое, что видит человек.
-    """
-    if count % 100 in range(11, 15):
-        return many
-    last = count % 10
-    if last == 1:
-        return one
-    if last in (2, 3, 4):
-        return few
-    return many
 
 
 def _sample_data_warning(vacancies_total: int) -> str:
@@ -566,13 +564,3 @@ def experience_label(experience_id: str | None) -> str:
     if not experience_id:
         return "не указан"
     return EXPERIENCE_LABELS.get(experience_id, experience_id)
-
-
-def format_money(amount: int | None) -> str:
-    if amount is None:
-        return "—"
-    return f"{amount:,}".replace(",", " ") + " ₽"
-
-
-def format_count(value: int) -> str:
-    return f"{value:,}".replace(",", " ")

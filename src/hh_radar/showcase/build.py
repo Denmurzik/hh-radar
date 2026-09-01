@@ -28,15 +28,8 @@ from hh_radar.db.queries import (
     market_overview,
     skill_stats,
 )
-from hh_radar.showcase.render import (
-    BarRow,
-    TimePoint,
-    experience_label,
-    format_count,
-    format_money,
-    plural_ru,
-    render_page,
-)
+from hh_radar.showcase.render import BarRow, TimePoint, experience_label, render_page
+from hh_radar.text import format_count, format_money, plural_ru
 
 logger = logging.getLogger(__name__)
 

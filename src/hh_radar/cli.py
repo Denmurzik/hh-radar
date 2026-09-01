@@ -230,12 +230,17 @@ def explain(
 ) -> None:
     """Показать план полнотекстового запроса.
 
-    Существует ради одной цели: убедиться, что GIN-индекс действительно
-    используется, а не остаётся украшением схемы.
+    Существует ради одной цели: проверить, что GIN-индекс действительно
+    работает, а не остаётся украшением схемы. Важная оговорка, которую
+    команда печатает сама: на маленькой таблице Postgres выберет
+    последовательное чтение, и это правильное решение планировщика,
+    а не поломка индекса.
     """
-    from sqlalchemy import text
+    from sqlalchemy import func, select, text
 
+    from hh_radar.db.models import Vacancy
     from hh_radar.db.session import session_scope
+    from hh_radar.text import plural_ru
 
     _require_db()
     sql = text(
@@ -246,8 +251,33 @@ def explain(
         "LIMIT 20"
     )
     with session_scope() as session:
-        for row in session.execute(sql, {"q": query}):
-            console.print(row[0])
+        total = session.scalar(select(func.count()).select_from(Vacancy)) or 0
+        plan = [row[0] for row in session.execute(sql, {"q": query})]
+
+    for line in plan:
+        console.print(line)
+
+    console.print("")
+    joined = " ".join(plan)
+    rows_word = plural_ru(total, "строка", "строки", "строк")
+    if "Bitmap Index Scan" in joined or "Index Scan" in joined:
+        console.print("[green]Индекс используется.[/green]")
+    elif total < 1000:
+        console.print(
+            "[yellow]Планировщик выбрал последовательное чтение — и правильно "
+            f"сделал: в таблице всего {total} {rows_word}, прочитать их целиком "
+            "дешевле, чем идти через индекс.[/yellow]"
+        )
+        console.print(
+            "Наберите базу командой [bold]hh-radar ingest[/bold] и повторите — "
+            "на нескольких тысячах вакансий появится Bitmap Index Scan."
+        )
+    else:
+        console.print(
+            "[red]Индекс не использован при заметном объёме данных — это стоит "
+            "разобрать: проверьте, что ix_vacancies_search_vector существует "
+            "и что статистика собрана (ANALYZE vacancies).[/red]"
+        )
 
 
 # ---------------------------------------------------------------- витрина ---
