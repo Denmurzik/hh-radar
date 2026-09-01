@@ -16,6 +16,22 @@ from sqlalchemy.orm import Session, sessionmaker
 
 from hh_radar.config import get_settings
 
+#: Сколько ждать соединения с базой, прежде чем признать её недоступной.
+#: Без явного значения psycopg ждёт столько, сколько позволит операционная
+#: система, — на практике минуты. Для MCP-сервера это худший вариант: клиент
+#: не получает ни ответа, ни ошибки и просто висит. Пять секунд достаточно
+#: для соседнего контейнера и мало для того, чтобы это заметили как задержку.
+CONNECT_TIMEOUT_SECONDS = 5
+
+
+def connect_args() -> dict[str, object]:
+    """Аргументы, которые уходят в драйвер при установке соединения.
+
+    Вынесено отдельной функцией, чтобы это можно было проверить тестом,
+    не разбирая внутренности SQLAlchemy.
+    """
+    return {"connect_timeout": CONNECT_TIMEOUT_SECONDS}
+
 
 @lru_cache(maxsize=1)
 def get_engine() -> Engine:
@@ -27,6 +43,7 @@ def get_engine() -> Engine:
         max_overflow=5,
         pool_pre_ping=True,
         future=True,
+        connect_args=connect_args(),
     )
 
 
