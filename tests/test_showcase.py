@@ -145,6 +145,24 @@ class TestSampleDataWarning:
         page = _page(vacancies_total=MIN_MEANINGFUL_VACANCIES)
         assert "демонстрационные данные" not in page
 
+    def test_demo_page_does_not_claim_data_came_from_hh(self) -> None:
+        """Подвал обещает «данные получены через API hh» — на демо это неправда.
+
+        Один абзац с неправдой обесценивает и те цифры на странице, которые
+        посчитаны честно, поэтому утверждение о происхождении данных живёт
+        под тем же признаком, что и баннер.
+        """
+        page = _page(vacancies_total=52)
+        assert "вымышлены" in page
+        assert "Данные получены через официальное API" not in page
+        assert "Что происходит на рынке" not in page
+
+    def test_real_page_keeps_the_market_framing(self) -> None:
+        page = _page(vacancies_total=MIN_MEANINGFUL_VACANCIES)
+        assert "Данные получены через официальное API" in page
+        assert "Что происходит на рынке" in page
+        assert "вымышлены" not in page
+
 
 class TestFormatting:
     def test_money_groups_digits_with_a_non_breaking_space(self) -> None:

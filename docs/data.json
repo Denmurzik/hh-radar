@@ -1,49 +1,81 @@
 {
-  "generated_at": "2026-09-01T11:28:38.975845+00:00",
+  "generated_at": "2026-09-01T12:45:22.624388+00:00",
   "database": {
-    "vacancies_total": 4,
-    "employers_total": 3,
-    "skills_total": 4,
-    "chunks_total": 1,
-    "chunks_embedded": 1,
-    "model_name": "hash-bow-v1",
-    "published_from": "2026-08-21T11:40:11+00:00",
-    "published_to": "2026-08-30T05:00:00+00:00",
-    "last_fetched_at": "2026-09-01T11:26:20.102053+00:00"
+    "vacancies_total": 52,
+    "employers_total": 16,
+    "skills_total": 40,
+    "chunks_total": 49,
+    "chunks_embedded": 49,
+    "model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "published_from": "2026-07-31T15:15:00+00:00",
+    "published_to": "2026-09-01T14:45:00+00:00",
+    "last_fetched_at": "2026-09-01T12:43:38.236189+00:00"
   },
   "market": {
-    "total": 4,
-    "with_salary": 3,
-    "salary_p25": 117500,
-    "salary_p50": 150000,
-    "salary_p75": 165000,
-    "remote_share": 0.5,
+    "total": 52,
+    "with_salary": 43,
+    "salary_p25": 120000,
+    "salary_p50": 160000,
+    "salary_p75": 205000,
+    "remote_share": 0.5576923076923077,
     "by_experience": [
       {
         "experience_id": "between1And3",
-        "count": 2
+        "count": 25
       },
       {
         "experience_id": "noExperience",
-        "count": 1
+        "count": 13
+      },
+      {
+        "experience_id": "between3And6",
+        "count": 11
       },
       {
         "experience_id": "moreThan6",
-        "count": 1
+        "count": 3
       }
     ],
     "top_employers": [
       {
-        "employer_name": "Студия Контора",
-        "count": 1
+        "employer_name": "Полярис Ритейл",
+        "count": 6
       },
       {
-        "employer_name": "KiteGroup",
-        "count": 1
+        "employer_name": "Оникс Телеком",
+        "count": 5
       },
       {
-        "employer_name": "Глобус-М",
-        "count": 1
+        "employer_name": "Сигма Практика",
+        "count": 5
+      },
+      {
+        "employer_name": "Дельта Букинг",
+        "count": 5
+      },
+      {
+        "employer_name": "Сфера Медиа",
+        "count": 5
+      },
+      {
+        "employer_name": "Прайм Логистика",
+        "count": 5
+      },
+      {
+        "employer_name": "Мосты Финтех",
+        "count": 4
+      },
+      {
+        "employer_name": "Речной Порт Групп",
+        "count": 3
+      },
+      {
+        "employer_name": "Гринфилд Агро",
+        "count": 3
+      },
+      {
+        "employer_name": "Лига Образования",
+        "count": 2
       }
     ]
   },
@@ -51,53 +83,150 @@
     {
       "name": "python",
       "display_name": "Python",
-      "vacancy_count": 1,
-      "share": 0.25,
-      "median_salary_from_rub": 150000
-    },
-    {
-      "name": "n8n",
-      "display_name": "n8n",
-      "vacancy_count": 1,
-      "share": 0.25,
-      "median_salary_from_rub": 150000
-    },
-    {
-      "name": "rest api",
-      "display_name": "REST API",
-      "vacancy_count": 1,
-      "share": 0.25,
-      "median_salary_from_rub": 150000
+      "vacancy_count": 33,
+      "share": 0.6346153846153846,
+      "median_salary_from_rub": 170000
     },
     {
       "name": "docker",
       "display_name": "Docker",
-      "vacancy_count": 1,
-      "share": 0.25,
+      "vacancy_count": 20,
+      "share": 0.38461538461538464,
+      "median_salary_from_rub": 170000
+    },
+    {
+      "name": "sql",
+      "display_name": "SQL",
+      "vacancy_count": 16,
+      "share": 0.3076923076923077,
+      "median_salary_from_rub": 180000
+    },
+    {
+      "name": "rest api",
+      "display_name": "REST API",
+      "vacancy_count": 12,
+      "share": 0.23076923076923078,
+      "median_salary_from_rub": 125000
+    },
+    {
+      "name": "postgresql",
+      "display_name": "PostgreSQL",
+      "vacancy_count": 8,
+      "share": 0.15384615384615385,
       "median_salary_from_rub": 150000
+    },
+    {
+      "name": "llm",
+      "display_name": "LLM",
+      "vacancy_count": 7,
+      "share": 0.1346153846153846,
+      "median_salary_from_rub": 160000
+    },
+    {
+      "name": "git",
+      "display_name": "Git",
+      "vacancy_count": 6,
+      "share": 0.11538461538461539,
+      "median_salary_from_rub": 120000
+    },
+    {
+      "name": "webhook",
+      "display_name": "Webhook",
+      "vacancy_count": 6,
+      "share": 0.11538461538461539,
+      "median_salary_from_rub": 100000
+    },
+    {
+      "name": "bi",
+      "display_name": "BI",
+      "vacancy_count": 4,
+      "share": 0.07692307692307693,
+      "median_salary_from_rub": 120000
+    },
+    {
+      "name": "redis",
+      "display_name": "Redis",
+      "vacancy_count": 4,
+      "share": 0.07692307692307693,
+      "median_salary_from_rub": 190000
+    },
+    {
+      "name": "промпт-инжиниринг",
+      "display_name": "Промпт-инжиниринг",
+      "vacancy_count": 4,
+      "share": 0.07692307692307693,
+      "median_salary_from_rub": 140000
+    },
+    {
+      "name": "fastapi",
+      "display_name": "FastAPI",
+      "vacancy_count": 4,
+      "share": 0.07692307692307693,
+      "median_salary_from_rub": 170000
+    },
+    {
+      "name": "linux",
+      "display_name": "Linux",
+      "vacancy_count": 4,
+      "share": 0.07692307692307693,
+      "median_salary_from_rub": 350000
+    },
+    {
+      "name": "php",
+      "display_name": "PHP",
+      "vacancy_count": 4,
+      "share": 0.07692307692307693,
+      "median_salary_from_rub": 95000
+    },
+    {
+      "name": "rpa",
+      "display_name": "RPA",
+      "vacancy_count": 4,
+      "share": 0.07692307692307693,
+      "median_salary_from_rub": 170000
     }
   ],
   "salary_by_experience": [
     {
       "experience": "Более 6 лет",
-      "median_salary_from_rub": 180000.0
+      "median_salary_from_rub": 350000.0
+    },
+    {
+      "experience": "3–6 лет",
+      "median_salary_from_rub": 205000.0
     },
     {
       "experience": "1–3 года",
-      "median_salary_from_rub": 150000.0
+      "median_salary_from_rub": 165000.0
     },
     {
       "experience": "Без опыта",
-      "median_salary_from_rub": 85000.0
+      "median_salary_from_rub": 115000.0
     }
   ],
   "weekly_published": [
     {
+      "week_start": "2026-07-27",
+      "count": 4
+    },
+    {
+      "week_start": "2026-08-03",
+      "count": 8
+    },
+    {
+      "week_start": "2026-08-10",
+      "count": 12
+    },
+    {
       "week_start": "2026-08-17",
-      "count": 1
+      "count": 6
     },
     {
       "week_start": "2026-08-24",
+      "count": 19
+    },
+    {
+      "week_start": "2026-08-31",
       "count": 3
     }
   ]
