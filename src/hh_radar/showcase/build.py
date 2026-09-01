@@ -34,6 +34,7 @@ from hh_radar.showcase.render import (
     experience_label,
     format_count,
     format_money,
+    plural_ru,
     render_page,
 )
 
@@ -57,6 +58,7 @@ class ShowcaseData:
     examples: list[tuple[str, str]]
     period: tuple[datetime | None, datetime | None]
     payload: dict[str, object]
+    vacancies_total: int
 
 
 def build_showcase(session: Session, out_dir: Path) -> list[Path]:
@@ -76,6 +78,7 @@ def build_showcase(session: Session, out_dir: Path) -> list[Path]:
             examples=data.examples,
             period=data.period,
             payload=data.payload,
+            vacancies_total=data.vacancies_total,
         ),
         encoding="utf-8",
     )
@@ -130,7 +133,8 @@ def collect(session: Session) -> ShowcaseData:
             value=stat.vacancy_count,
             display=f"{stat.share * 100:.0f}%",
             note=(
-                f"{format_count(stat.vacancy_count)} вакансий"
+                f"{format_count(stat.vacancy_count)} "
+                + plural_ru(stat.vacancy_count, "вакансия", "вакансии", "вакансий")
                 + (
                     f", медиана {format_money(stat.median_salary_from_rub)}"
                     if stat.median_salary_from_rub
@@ -169,6 +173,7 @@ def collect(session: Session) -> ShowcaseData:
         examples=examples,
         period=(status.published_from, status.published_to),
         payload=payload,
+        vacancies_total=status.vacancies_total,
     )
 
 
@@ -210,7 +215,11 @@ def _salary_by_experience(session: Session) -> list[BarRow]:
             label=experience_label(row[0]),
             value=float(row[1] or 0),
             display=format_money(int(row[1])) if row[1] else "—",
-            note=f"{format_count(row[2])} вакансий с указанной вилкой",
+            note=(
+                f"{format_count(row[2])} "
+                + plural_ru(row[2], "вакансия", "вакансии", "вакансий")
+                + " с указанной вилкой"
+            ),
         )
         for row in rows
         if row[1]

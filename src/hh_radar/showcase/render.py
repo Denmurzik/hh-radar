@@ -36,6 +36,8 @@ LIGHT = {
     "series-2": "#eb6834",
     "series-3": "#1baf7a",
     "track": "#e8edf5",
+    "warn-bg": "#fdf3e7",
+    "warn-line": "#f0c9a0",
 }
 DARK = {
     "surface": "#1a1a19",
@@ -48,6 +50,8 @@ DARK = {
     "series-2": "#d95926",
     "series-3": "#199e70",
     "track": "#25303d",
+    "warn-bg": "#2b2118",
+    "warn-line": "#5a3f27",
 }
 
 REPO_URL = "https://github.com/Denmurzik/hh-radar"
@@ -76,6 +80,13 @@ class TimePoint:
     count: int
 
 
+#: Ниже этого числа вакансий страница честно предупреждает, что показывает
+#: не срез рынка, а демонстрационные данные. Витрина, обещающая «рынок»
+#: по четырём объявлениям, — это ровно та ложь, из-за которой не верят
+#: остальным цифрам.
+MIN_MEANINGFUL_VACANCIES = 200
+
+
 def render_page(
     *,
     generated_at: datetime,
@@ -87,12 +98,14 @@ def render_page(
     examples: list[tuple[str, str]],
     period: tuple[datetime | None, datetime | None],
     payload: dict[str, object],
+    vacancies_total: int,
 ) -> str:
     """Собрать всю страницу целиком."""
     # Секции считаются заранее: вызовы функций внутри f-строки форматтер
     # разворачивает в нечитаемую лапшу.
     period_text = _period_text(period)
     tiles = "".join(_tile(title, value, note) for title, value, note in stats)
+    warning = _sample_data_warning(vacancies_total)
     skills_block = _bar_section(
         "Какие навыки требуют чаще всего",
         "Доля вакансий из базы, в которых навык указан в требованиях. "
@@ -141,6 +154,8 @@ def render_page(
       <a href="{REPO_URL}">исходный код</a></p>
   </header>
 
+  {warning}
+
   <section class="tiles" aria-label="Ключевые числа">{tiles}
   </section>
 
@@ -172,6 +187,37 @@ def render_page(
 
 
 # ------------------------------------------------------------------ блоки --
+
+
+def plural_ru(count: int, one: str, few: str, many: str) -> str:
+    """Русское склонение числительных.
+
+    «4 вакансий» в шапке витрины читается как небрежность, а витрина —
+    первое, что видит человек.
+    """
+    if count % 100 in range(11, 15):
+        return many
+    last = count % 10
+    if last == 1:
+        return one
+    if last in (2, 3, 4):
+        return few
+    return many
+
+
+def _sample_data_warning(vacancies_total: int) -> str:
+    """Предупреждение, если база наполнена примерами, а не настоящим сбором."""
+    if vacancies_total >= MIN_MEANINGFUL_VACANCIES:
+        return ""
+    return (
+        '<p class="warn"><strong>Это демонстрационные данные.</strong> '
+        f"В базе всего {vacancies_total} "
+        f"{plural_ru(vacancies_total, 'вакансия', 'вакансии', 'вакансий')} — "
+        "столько кладёт команда "
+        "<code>hh-radar seed</code> для знакомства с проектом. Цифры ниже "
+        "посчитаны честно, но говорить по ним о рынке нельзя. Настоящий срез "
+        "появляется после <code>hh-radar ingest</code> с токеном приложения hh.</p>"
+    )
 
 
 def _tile(title: str, value: str, note: str) -> str:
@@ -365,6 +411,16 @@ def _css() -> str:
   .blurb {{ margin: 0 0 18px; font-size: 14px; color: var(--ink-2); max-width: 68ch; }}
   .block {{ margin: 0 0 48px; }}
   .empty {{ color: var(--ink-3); font-style: italic; }}
+  .warn {{
+    background: var(--warn-bg); border: 1px solid var(--warn-line);
+    border-radius: 8px; padding: 14px 16px; margin: 0 0 28px;
+    font-size: 14.5px; color: var(--ink-2); max-width: none;
+  }}
+  .warn strong {{ color: var(--ink); }}
+  code {{
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9em;
+    background: var(--surface-2); border-radius: 4px; padding: 1px 5px;
+  }}
 
   .tiles {{
     display: grid; gap: 12px; margin-bottom: 48px;
