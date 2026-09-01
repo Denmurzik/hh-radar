@@ -94,12 +94,22 @@ class TestRenderPage:
         assert '<div class="bar-value">52%</div>' in page
 
     def test_payload_cannot_break_out_of_the_script_tag(self) -> None:
-        """Названия навыков пишут работодатели — это чужой текст в нашем HTML."""
-        page = _page(payload={"skill": "</script><img src=x onerror=alert(1)>"})
-        _, _, tail = page.partition('<script id="showcase-data"')
-        # После открытия блока данных первый </script> должен закрывать
-        # именно его, а не тот, что приехал из данных.
-        assert "onerror" not in tail.split("</script>")[0]
+        """Названия навыков пишут работодатели — это чужой текст в нашем HTML.
+
+        Проверяем не наличие подстроки, а то, что блок данных закрывается
+        там, где должен: всё до первого ``</script>`` обязано разбираться
+        как полный JSON. Если бы ``</script>`` из данных попал в разметку
+        как есть, блок оборвался бы раньше и разбор упал.
+        """
+        import json
+
+        payload = {"skill": "</script><img src=x onerror=alert(1)>"}
+        page = _page(payload=payload)
+
+        _, _, tail = page.partition('<script id="showcase-data" type="application/json">')
+        block = tail.split("</script>")[0]
+
+        assert json.loads(block) == payload
 
     def test_user_content_is_escaped(self) -> None:
         page = _page(employers=[("<script>alert(1)</script>", 3)])
