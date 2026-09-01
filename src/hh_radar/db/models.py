@@ -42,7 +42,8 @@ from sqlalchemy import (
 from sqlalchemy.dialects.postgresql import JSONB, TSVECTOR
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
-#: Размерность вектора multilingual-e5-small. Вынесена в константу, потому что
+#: Размерность вектора paraphrase-multilingual-MiniLM-L12-v2. Вынесена в константу,
+#: потому что
 #: она зашита сразу в двух местах: в столбце Vector(...) и в миграции.
 EMBEDDING_DIM = 384
 
@@ -85,7 +86,7 @@ class Employer(Base):
         DateTime(timezone=True), server_default=func.now(), nullable=False
     )
 
-    vacancies: Mapped[list["Vacancy"]] = relationship(
+    vacancies: Mapped[list[Vacancy]] = relationship(
         back_populates="employer", cascade="all, delete-orphan"
     )
 
@@ -109,7 +110,7 @@ class Skill(Base):
     name: Mapped[str] = mapped_column(String(256), nullable=False, unique=True)
     display_name: Mapped[str] = mapped_column(String(256), nullable=False)
 
-    vacancies: Mapped[list["Vacancy"]] = relationship(
+    vacancies: Mapped[list[Vacancy]] = relationship(
         secondary=vacancy_skills, back_populates="skills"
     )
 
@@ -128,7 +129,7 @@ class Vacancy(Base):
     employer_id: Mapped[int | None] = mapped_column(
         BigInteger, ForeignKey("employers.id", ondelete="CASCADE")
     )
-    employer: Mapped["Employer | None"] = relationship(back_populates="vacancies")
+    employer: Mapped[Employer | None] = relationship(back_populates="vacancies")
 
     area_id: Mapped[int | None] = mapped_column(Integer)
     area_name: Mapped[str | None] = mapped_column(String(256))
@@ -175,10 +176,10 @@ class Vacancy(Base):
         ),
     )
 
-    skills: Mapped[list["Skill"]] = relationship(
+    skills: Mapped[list[Skill]] = relationship(
         secondary=vacancy_skills, back_populates="vacancies"
     )
-    chunks: Mapped[list["VacancyChunk"]] = relationship(
+    chunks: Mapped[list[VacancyChunk]] = relationship(
         back_populates="vacancy", cascade="all, delete-orphan", passive_deletes=True
     )
 
@@ -221,7 +222,7 @@ class VacancyChunk(Base):
         DateTime(timezone=True), server_default=func.now(), nullable=False
     )
 
-    vacancy: Mapped["Vacancy"] = relationship(back_populates="chunks")
+    vacancy: Mapped[Vacancy] = relationship(back_populates="chunks")
 
     __table_args__ = (
         UniqueConstraint("vacancy_id", "chunk_index", name="uq_chunk_position"),

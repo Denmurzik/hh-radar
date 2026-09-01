@@ -60,8 +60,13 @@ class Settings(BaseSettings):
     hh_timeout_seconds: float = Field(default=20.0, alias="HH_TIMEOUT", gt=0)
 
     # --- эмбеддинги ---
+    # Выбор модели объяснён в README: из многоязычных, доступных в fastembed,
+    # это самая лёгкая (220 МБ, CPU, без GPU). multilingual-e5-large сильнее,
+    # но весит 2.24 ГБ — для репозитория, который должен запускаться у любого
+    # проверяющего одной командой, это неоправданно.
     embedding_model: str = Field(
-        default="intfloat/multilingual-e5-small", alias="EMBEDDING_MODEL"
+        default="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        alias="EMBEDDING_MODEL",
     )
     embedding_dim: int = Field(default=384, alias="EMBEDDING_DIM")
     embedding_backend: str = Field(
@@ -83,7 +88,9 @@ class Settings(BaseSettings):
     def _known_backend(cls, v: str) -> str:
         allowed = {"fastembed", "hash"}
         if v not in allowed:
-            raise ValueError(f"embedding_backend должен быть одним из {sorted(allowed)}, получено {v!r}")
+            raise ValueError(
+                f"embedding_backend должен быть одним из {sorted(allowed)}, получено {v!r}"
+            )
         return v
 
     @property
