@@ -148,8 +148,8 @@ def fetch_missing_details(
             continue
 
         parsed = parse_vacancy(raw)
-        _upsert_vacancy(session, parsed, report, mark_detailed=True)
-        _link_skills(session, parsed, report)
+        upsert_vacancy(session, parsed, report, mark_detailed=True)
+        link_skills(session, parsed, report)
         report.details_fetched += 1
 
         if index % BATCH_SIZE == 0:
@@ -160,22 +160,24 @@ def fetch_missing_details(
     return report
 
 
-# --------------------------------------------------------------- internals --
+# ------------------------------------------------- операции записи в базу --
+# Публичные: их переиспользует hh_radar.ingest.seed, наполняющий базу
+# примерами без обращения к API.
 
 
 def _flush(session: Session, batch: list[ParsedVacancy], report: IngestReport) -> None:
     for parsed in batch:
-        _upsert_vacancy(session, parsed, report, mark_detailed=parsed.is_detailed)
+        upsert_vacancy(session, parsed, report, mark_detailed=parsed.is_detailed)
         if parsed.skills:
-            _link_skills(session, parsed, report)
+            link_skills(session, parsed, report)
     session.commit()
 
 
-def _upsert_vacancy(
+def upsert_vacancy(
     session: Session, parsed: ParsedVacancy, report: IngestReport, *, mark_detailed: bool
 ) -> None:
     if parsed.employer is not None:
-        _upsert_employer(session, parsed, report)
+        upsert_employer(session, parsed, report)
 
     now = datetime.now(UTC)
     values: dict[str, object] = {
@@ -228,7 +230,7 @@ def _upsert_vacancy(
         report.updated += 1
 
 
-def _upsert_employer(session: Session, parsed: ParsedVacancy, report: IngestReport) -> None:
+def upsert_employer(session: Session, parsed: ParsedVacancy, report: IngestReport) -> None:
     employer = parsed.employer
     if employer is None:
         return
@@ -250,7 +252,7 @@ def _upsert_employer(session: Session, parsed: ParsedVacancy, report: IngestRepo
     report.employers_touched += 1
 
 
-def _link_skills(session: Session, parsed: ParsedVacancy, report: IngestReport) -> None:
+def link_skills(session: Session, parsed: ParsedVacancy, report: IngestReport) -> None:
     """Записать навыки вакансии и связи с ней.
 
     Связи перезаписываются целиком: работодатель мог убрать навык из вакансии,

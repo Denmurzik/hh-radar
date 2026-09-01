@@ -128,6 +128,22 @@ def details(
 
 
 @app.command()
+def seed() -> None:
+    """Наполнить базу примерами из samples/ — без токена и без сети.
+
+    Быстрый способ посмотреть на работающий поиск, если заводить приложение
+    на dev.hh.ru ради знакомства не хочется.
+    """
+    from hh_radar.db.session import session_scope
+    from hh_radar.ingest.seed import seed_from_samples
+
+    _require_db()
+    with session_scope() as session:
+        report = seed_from_samples(session)
+    console.print(f"загружено вакансий: {report.seen}, связей с навыками: {report.skills_linked}")
+
+
+@app.command()
 def status() -> None:
     """Что лежит в базе."""
     from hh_radar.db.queries import db_status
