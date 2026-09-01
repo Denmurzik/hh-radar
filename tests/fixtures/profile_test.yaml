@@ -1,0 +1,34 @@
+# Тестовый профиль для tests/test_profile.py. Структура повторяет
+# profile.example.yaml, значения подобраны так, чтобы тесты были предсказуемы.
+
+title: Backend-разработчик (тест)
+
+experience_years: 1.5
+
+skills:
+  - name: Python
+    level: strong
+  - name: PostgreSQL
+    level: working
+  - name: Docker
+    level: basic
+
+missing:
+  - kubernetes
+  - go
+
+constraints:
+  salary_min_rub: 100000
+  remote_only: true
+  relocation: false
+  employment:
+    - full
+  min_experience_accepted: between1And3
+  english_speaking: false
+
+red_flags:
+  - 1С
+  - выезд в офис
+
+green_flags:
+  - наставник
