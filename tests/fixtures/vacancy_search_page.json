@@ -1,0 +1,102 @@
+{
+  "items": [
+    {
+      "id": "136048682",
+      "premium": false,
+      "name": "Вайбкодер / Vibe coder",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": { "id": "88", "name": "Казань", "url": "https://api.hh.ru/areas/88" },
+      "salary": { "from": 85000, "to": 120000, "currency": "RUR", "gross": true },
+      "salary_range": {
+        "from": 85000,
+        "to": 120000,
+        "currency": "RUR",
+        "gross": true,
+        "mode": { "id": "MONTH", "name": "За месяц" },
+        "frequency": null
+      },
+      "type": { "id": "open", "name": "Открытая" },
+      "address": null,
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2026-08-28T09:12:00+0300",
+      "created_at": "2026-08-28T09:12:00+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=136048682",
+      "url": "https://api.hh.ru/vacancies/136048682",
+      "alternate_url": "https://hh.ru/vacancy/136048682",
+      "relations": [],
+      "employer": {
+        "id": "1455",
+        "name": "KiteGroup",
+        "url": "https://api.hh.ru/employers/1455",
+        "alternate_url": "https://hh.ru/employer/1455",
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=1455",
+        "accredited_it_employer": false,
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Опыт работы с <highlighttext>Claude Code</highlighttext>, Codex или аналогами.",
+        "responsibility": "Собирать внутренние инструменты под задачи команды."
+      },
+      "contacts": null,
+      "schedule": { "id": "remote", "name": "Удаленная работа" },
+      "work_format": [{ "id": "REMOTE", "name": "Удалённо" }],
+      "professional_roles": [{ "id": "96", "name": "Программист, разработчик" }],
+      "experience": { "id": "noExperience", "name": "Нет опыта" },
+      "employment": { "id": "full", "name": "Полная занятость" }
+    },
+    {
+      "id": "135859033",
+      "premium": false,
+      "name": "N8n разработчик",
+      "area": { "id": "2", "name": "Санкт-Петербург", "url": "https://api.hh.ru/areas/2" },
+      "salary": null,
+      "salary_range": null,
+      "type": { "id": "open", "name": "Открытая" },
+      "published_at": "2026-08-21T14:40:11+0300",
+      "created_at": "2026-08-21T14:40:11+0300",
+      "archived": false,
+      "url": "https://api.hh.ru/vacancies/135859033",
+      "alternate_url": "https://hh.ru/vacancy/135859033",
+      "employer": {
+        "id": "9876543",
+        "name": "Студия Контора",
+        "alternate_url": "https://hh.ru/employer/9876543",
+        "trusted": false
+      },
+      "snippet": {
+        "requirement": "Уверенное владение <highlighttext>n8n</highlighttext>, знание JS.",
+        "responsibility": "Проектная работа над воркфлоу заказчиков."
+      },
+      "schedule": { "id": "flexible", "name": "Гибкий график" },
+      "work_format": [],
+      "professional_roles": [{ "id": "96", "name": "Программист, разработчик" }],
+      "experience": { "id": "between1And3", "name": "От 1 года до 3 лет" },
+      "employment": { "id": "project", "name": "Проектная работа" }
+    },
+    {
+      "id": "999000111",
+      "name": "AI Automation Engineer (USD)",
+      "area": { "id": "1002", "name": "Минск", "url": "https://api.hh.ru/areas/1002" },
+      "salary": { "from": 2000, "to": 3000, "currency": "USD", "gross": false },
+      "published_at": "2026-08-30T08:00:00+0300",
+      "created_at": "2026-08-30T08:00:00+0300",
+      "archived": false,
+      "alternate_url": "https://hh.ru/vacancy/999000111",
+      "employer": null,
+      "schedule": { "id": "fullDay", "name": "Полный день" },
+      "experience": { "id": "moreThan6", "name": "Более 6 лет" },
+      "employment": { "id": "full", "name": "Полная занятость" }
+    }
+  ],
+  "found": 3,
+  "pages": 1,
+  "page": 0,
+  "per_page": 100,
+  "clusters": null,
+  "arguments": null,
+  "alternate_url": "https://hh.ru/search/vacancy?text=n8n"
+}
