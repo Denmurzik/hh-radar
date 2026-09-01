@@ -49,7 +49,9 @@ class StdioClient:
 
     def request(self, method: str, params: dict[str, Any] | None = None) -> dict[str, Any]:
         self._next_id += 1
-        self._write({"jsonrpc": "2.0", "id": self._next_id, "method": method, "params": params or {}})
+        self._write(
+            {"jsonrpc": "2.0", "id": self._next_id, "method": method, "params": params or {}}
+        )
         return self._read()
 
     def notify(self, method: str) -> None:
