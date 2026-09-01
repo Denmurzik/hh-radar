@@ -61,6 +61,7 @@ DARK = {
 __all__ = [
     "BarRow",
     "TimePoint",
+    "embed_json",
     "experience_label",
     "format_count",
     "format_money",
@@ -139,7 +140,7 @@ def render_page(
     timeline_block = _timeline_section(timeline)
     employers_block = _employers_section(employers)
     examples_block = _examples_section(examples)
-    raw_payload = json.dumps(payload, ensure_ascii=False)
+    raw_payload = embed_json(payload)
     description = (
         "Собственная база вакансий hh.ru с полнотекстовым и семантическим поиском. "
         "Витрина собрана программой из данных базы."
@@ -201,6 +202,26 @@ def render_page(
 
 
 # ------------------------------------------------------------------ блоки --
+
+
+def embed_json(payload: object) -> str:
+    """Сериализовать данные для вставки внутрь тега ``<script>``.
+
+    ``json.dumps`` не трогает ``<`` и ``>``, а браузер закрывает блок скрипта
+    на первой же последовательности ``</script>`` — где бы она ни встретилась,
+    хоть внутри строкового литерала. Названия навыков и вакансий приходят от
+    работодателей, то есть это чужой текст: навык с именем
+    ``</script><img onerror=...>`` вырвался бы из тега и выполнился.
+
+    Экранируем три символа их юникодными escape-последовательностями. JSON от
+    этого не перестаёт быть валидным, а разорвать тег больше нечем.
+    """
+    return (
+        json.dumps(payload, ensure_ascii=False)
+        .replace("<", "\\u003c")
+        .replace(">", "\\u003e")
+        .replace("&", "\\u0026")
+    )
 
 
 def _sample_data_warning(vacancies_total: int) -> str:

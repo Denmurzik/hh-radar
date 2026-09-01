@@ -16,6 +16,7 @@ from hh_radar.showcase.render import (
     MIN_MEANINGFUL_VACANCIES,
     BarRow,
     TimePoint,
+    embed_json,
     experience_label,
     render_page,
 )
@@ -92,6 +93,14 @@ class TestRenderPage:
         page = _page(skills=[BarRow("Python", 620, "52%", None)])
         assert '<div class="bar-value">52%</div>' in page
 
+    def test_payload_cannot_break_out_of_the_script_tag(self) -> None:
+        """Названия навыков пишут работодатели — это чужой текст в нашем HTML."""
+        page = _page(payload={"skill": "</script><img src=x onerror=alert(1)>"})
+        _, _, tail = page.partition('<script id="showcase-data"')
+        # После открытия блока данных первый </script> должен закрывать
+        # именно его, а не тот, что приехал из данных.
+        assert "onerror" not in tail.split("</script>")[0]
+
     def test_user_content_is_escaped(self) -> None:
         page = _page(employers=[("<script>alert(1)</script>", 3)])
         assert "<script>alert(1)</script>" not in page
@@ -149,3 +158,19 @@ class TestFormatting:
     )
     def test_experience_labels(self, raw: str | None, expected: str) -> None:
         assert experience_label(raw) == expected
+
+
+class TestEmbedJson:
+    def test_escapes_tag_breaking_characters(self) -> None:
+        out = embed_json({"x": "</script>"})
+        assert "</script>" not in out
+        assert "u003c" in out
+
+    def test_stays_valid_json(self) -> None:
+        import json
+
+        payload = {"a": "<b>&</b>", "n": 1, "ru": "Питон"}
+        assert json.loads(embed_json(payload)) == payload
+
+    def test_cyrillic_is_not_mangled(self) -> None:
+        assert "Питон" in embed_json({"x": "Питон"})
