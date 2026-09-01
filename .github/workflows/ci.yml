@@ -116,3 +116,68 @@ jobs:
 
       - name: CLI отвечает на --help
         run: uv run hh-radar --help
+
+  quickstart:
+    name: быстрый старт из README
+    runs-on: ubuntu-latest
+    # Отдельная работа, потому что проверяет не код, а инструкцию: человек
+    # выполняет пять команд из README и должен получить работающую базу.
+    # Ставится extra rag — единственное место, где проверяется, что
+    # onnxruntime вообще встаёт на поддерживаемых версиях Python.
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_USER: hh
+          POSTGRES_PASSWORD: hh
+          POSTGRES_DB: hh_radar
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U hh -d hh_radar"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+
+    env:
+      DATABASE_URL: postgresql+psycopg://hh:hh@localhost:5433/hh_radar
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: uv sync --extra rag
+        run: uv sync --extra rag
+
+      - name: alembic upgrade head
+        run: uv run alembic upgrade head
+
+      - name: hh-radar seed
+        run: uv run hh-radar seed
+
+      - name: hh-radar status
+        run: uv run hh-radar status
+
+      - name: Витрина собирается из данных базы
+        run: |
+          uv run hh-radar showcase --output /tmp/showcase
+          test -s /tmp/showcase/index.html
+          test -s /tmp/showcase/data.json
+
+      - name: Семантический поиск работает на заглушке эмбеддингов
+        env:
+          EMBEDDING_BACKEND: hash
+        run: |
+          uv run hh-radar index
+          uv run python -c "
+          from hh_radar.db.session import session_scope
+          from hh_radar.rag.search import semantic_search
+          with session_scope() as s:
+              hits = semantic_search(s, 'автоматизация n8n', limit=3)
+          assert hits, 'семантический поиск ничего не вернул на засеянной базе'
+          print('найдено:', len(hits))
+          "
+
