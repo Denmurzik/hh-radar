@@ -20,10 +20,10 @@ jobs:
     name: линтер и типы
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Установить uv
-        uses: astral-sh/setup-uv@v5
+        uses: astral-sh/setup-uv@v6
         with:
           enable-cache: true
 
@@ -68,10 +68,10 @@ jobs:
       DATABASE_URL: postgresql+psycopg://hh:hh@localhost:5433/hh_radar
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Установить uv
-        uses: astral-sh/setup-uv@v5
+        uses: astral-sh/setup-uv@v6
         with:
           enable-cache: true
           python-version: ${{ matrix.python }}
@@ -89,16 +89,21 @@ jobs:
         run: uv run alembic check
 
       - name: Тесты
-        run: uv run pytest -q --cov=hh_radar --cov-report=term-missing
+        run: uv run pytest -ra --cov=hh_radar --cov-report=term-missing
+
+      - name: Интеграционные тесты действительно выполнялись
+        # Отдельным шагом, потому что пропущенный из-за недоступной базы
+        # интеграционный тест выглядит в общем прогоне как успех.
+        run: uv run pytest -m integration --no-header -q
 
   smoke:
     name: сервер поднимается
     runs-on: ubuntu-latest
     needs: [lint]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: astral-sh/setup-uv@v5
+      - uses: astral-sh/setup-uv@v6
         with:
           enable-cache: true
 

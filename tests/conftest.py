@@ -7,6 +7,7 @@
 from __future__ import annotations
 
 import json
+import os
 from collections.abc import Iterator
 from pathlib import Path
 from typing import Any
@@ -64,12 +65,8 @@ def isolated_settings(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Iterat
 def database_url() -> str:
     """DSN для интеграционных тестов.
 
-    Берётся из окружения — тот же, что у приложения. Если база не отвечает,
-    тесты, которые её требуют, пропускаются, а не падают: разработчик без
-    поднятого docker compose должен видеть зелёный прогон юнит-тестов.
+    Берётся из окружения — тот же, что у приложения.
     """
-    import os
-
     return os.environ.get("DATABASE_URL", "postgresql+psycopg://hh:hh@localhost:5433/hh_radar")
 
 
@@ -87,7 +84,14 @@ def db_session(database_url: str):  # type: ignore[no-untyped-def]
     try:
         connection = engine.connect()
     except Exception as exc:  # pragma: no cover - зависит от окружения
-        pytest.skip(f"PostgreSQL недоступен ({exc.__class__.__name__}); docker compose up -d db")
+        message = f"PostgreSQL недоступен ({exc.__class__.__name__}): {database_url}"
+        # На машине разработчика без поднятого docker compose пропуск — это
+        # удобство. В CI тот же пропуск превращает прогон в ложно-зелёный:
+        # база там есть всегда, и если её не видно — сломана конфигурация,
+        # а не окружение. Поэтому в CI это падение.
+        if os.environ.get("CI"):
+            pytest.fail(f"{message}. В CI база обязана быть доступна.")
+        pytest.skip(f"{message}; поднимите её: docker compose up -d db")
 
     transaction = connection.begin()
     session = Session(bind=connection, join_transaction_mode="create_savepoint")
