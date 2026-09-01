@@ -119,9 +119,9 @@ class TestLimitClamping:
             captured.update(kwargs)
             return []
 
-        # semantic_search импортирует hh_radar.rag.search лениво внутри функции —
-        # подменяем сам модуль в sys.modules, чтобы не зависеть от того,
-        # существует ли он на диске у коллеги из rag на момент прогона тестов.
+        # semantic_search импортирует hh_radar.rag.search лениво внутри функции:
+        # без extra rag модуля нет вовсе. Подменяем его в sys.modules, чтобы
+        # тест не зависел ни от установленного fastembed, ни от живой базы.
         import sys
         import types
 

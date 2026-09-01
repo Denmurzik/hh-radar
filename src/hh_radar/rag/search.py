@@ -12,6 +12,7 @@ from sqlalchemy.orm import Session
 
 from hh_radar.config import get_settings
 from hh_radar.db.models import Employer, Vacancy, VacancyChunk
+from hh_radar.db.queries import VacancySummary, search_vacancies
 from hh_radar.rag.embedder import get_embedder
 
 
@@ -29,8 +30,8 @@ class SemanticHit:
     published_at: datetime | None
 
     def to_dict(self) -> dict[str, Any]:
-        """JSON-совместимое представление (datetime -> ISO-строка). Нужен
-        коллеге по MCP-серверу для сериализации ответа инструмента."""
+        """JSON-совместимое представление (datetime -> ISO-строка):
+        MCP-сервер отдаёт ответ инструмента как JSON."""
         return {
             "vacancy_id": self.vacancy_id,
             "name": self.name,
@@ -157,21 +158,14 @@ def reciprocal_rank_fusion(
     return scores
 
 
-def extract_vacancy_id(item: Any) -> int:
-    """Достаёт id вакансии из одного результата ``search_vacancies``.
+def extract_vacancy_id(item: VacancySummary | SemanticHit) -> int:
+    """Идентификатор вакансии из результата любого из двух поисков.
 
-    Контракт этой функции у коллеги (``hh_radar.db.queries``) на момент
-    написания этого модуля ещё не финализирован, поэтому поддерживаем
-    разумные варианты формы результата: сам int, объект с атрибутом
-    ``vacancy_id`` или ``id``.
+    Полнотекстовый поиск отдаёт ``VacancySummary`` с полем ``id``,
+    семантический — ``SemanticHit`` с полем ``vacancy_id``. Сплавлять их
+    ранги можно только после приведения к общему ключу.
     """
-    if isinstance(item, int):
-        return item
-    for attr in ("vacancy_id", "id"):
-        value = getattr(item, attr, None)
-        if isinstance(value, int):
-            return value
-    raise TypeError(f"Не удалось получить vacancy_id из результата search_vacancies: {item!r}")
+    return item.vacancy_id if isinstance(item, SemanticHit) else item.id
 
 
 def _fetch_fallback_hit(session: Session, vacancy_id: int) -> SemanticHit:
@@ -228,9 +222,6 @@ def hybrid_search(
     Ранг же универсален: и там, и там ранг 1 значит "лучший результат этого
     конкретного метода", и это единственное, что нужно RRF.
 
-    Если у ``hh_radar.db.queries`` ещё нет ``search_vacancies`` (модуль пишет
-    коллега параллельно), функция не падает: гибридный поиск тихо деградирует
-    до чисто семантического, вместо того чтобы ронять вызывающий код.
     """
     fetch_limit = max(limit * 4, limit)
 
@@ -238,13 +229,8 @@ def hybrid_search(
     semantic_rank = {hit.vacancy_id: i + 1 for i, hit in enumerate(semantic_hits)}
     hits_by_id = {hit.vacancy_id: hit for hit in semantic_hits}
 
-    try:
-        from hh_radar.db.queries import search_vacancies
-    except ImportError:
-        fulltext_rank: dict[int, int] = {}
-    else:
-        fulltext_results = search_vacancies(session, query, limit=fetch_limit)
-        fulltext_rank = {extract_vacancy_id(item): i + 1 for i, item in enumerate(fulltext_results)}
+    fulltext_results = search_vacancies(session, query, limit=fetch_limit)
+    fulltext_rank = {extract_vacancy_id(item): i + 1 for i, item in enumerate(fulltext_results)}
 
     fused = reciprocal_rank_fusion(
         [semantic_rank, fulltext_rank], [semantic_weight, 1 - semantic_weight]

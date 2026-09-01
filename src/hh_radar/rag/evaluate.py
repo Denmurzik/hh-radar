@@ -83,19 +83,11 @@ def _reciprocal_rank(ranked_ids: list[int], relevant: set[int]) -> float:
 
 
 def _run_method(session: Session, method: str, query: str, top_k: int) -> tuple[list[int], float]:
-    """Выполняет один метод поиска и замеряет время ответа.
-
-    Полнотекстовый метод импортируется лениво, внутри функции: к моменту
-    написания этого модуля ``hh_radar.db.queries.search_vacancies``
-    (файл коллеги) мог ещё не существовать — тогда метод просто не находит
-    ничего, вместо падения всей оценки.
-    """
+    """Выполняет один метод поиска и замеряет время ответа."""
     started = time.perf_counter()
     if method == "fulltext":
-        try:
-            from hh_radar.db.queries import search_vacancies
-        except ImportError:
-            return [], time.perf_counter() - started
+        from hh_radar.db.queries import search_vacancies
+
         results = search_vacancies(session, query, limit=top_k)
         ids = [extract_vacancy_id(item) for item in results]
     elif method == "semantic":
