@@ -24,6 +24,7 @@ from typing import Any
 
 from mcp.server.mcpserver import MCPServer
 
+from hh_radar import __version__
 from hh_radar.db import queries
 from hh_radar.db.queries import MAX_LIMIT
 from hh_radar.db.session import ping, session_scope
@@ -216,6 +217,9 @@ def build_server() -> MCPServer:
     """
     srv = MCPServer(
         name="hh-radar",
+        # Версия видна клиенту в ответе на initialize: пустая строка там
+        # выглядит как недоделанный сервер.
+        version=__version__,
         instructions=(
             "Инструменты для работы с локальной базой вакансий hh.ru: полнотекстовый "
             "и семантический поиск, карточка вакансии, агрегаты по рынку и навыкам, "
