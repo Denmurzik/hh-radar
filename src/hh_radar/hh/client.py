@@ -73,7 +73,9 @@ class RateLimiter:
 
     def __init__(self, requests_per_second: float) -> None:
         self._min_interval = 1.0 / requests_per_second
-        self._last_call = 0.0
+        # -inf, а не 0: иначе первый же запрос за время жизни процесса
+        # ждал бы целый интервал впустую.
+        self._last_call = float("-inf")
 
     def wait(self) -> None:
         elapsed = time.monotonic() - self._last_call

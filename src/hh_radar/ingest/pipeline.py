@@ -21,8 +21,9 @@ from __future__ import annotations
 import logging
 from dataclasses import dataclass, field
 from datetime import UTC, datetime, timedelta
+from typing import Any
 
-from sqlalchemy import literal_column, select
+from sqlalchemy import Row, literal_column, select
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.orm import Session
 
@@ -219,7 +220,7 @@ def upsert_vacancy(
     # xmax системного столбца равен нулю у только что вставленной строки и
     # содержит идентификатор транзакции у обновлённой. Это штатный способ
     # отличить INSERT от UPDATE внутри ON CONFLICT, не делая лишнего SELECT.
-    row = session.execute(
+    row: Row[Any] | None = session.execute(
         stmt.returning(literal_column("(xmax = 0)").label("was_inserted"))
     ).first()
     if row is None:

@@ -21,7 +21,13 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from hh_radar.db.models import Vacancy
-from hh_radar.db.queries import db_status, market_overview, skill_stats
+from hh_radar.db.queries import (
+    MarketOverview,
+    SkillStat,
+    db_status,
+    market_overview,
+    skill_stats,
+)
 from hh_radar.showcase.render import (
     BarRow,
     TimePoint,
@@ -211,7 +217,7 @@ def _salary_by_experience(session: Session) -> list[BarRow]:
     ]
 
 
-def _examples(overview: object, skills: list) -> list[tuple[str, str]]:  # type: ignore[type-arg]
+def _examples(overview: MarketOverview, skills: list[SkillStat]) -> list[tuple[str, str]]:
     """Живые примеры вопросов к агенту с ответами из тех же данных.
 
     Ответы собираются из посчитанных чисел, а не пишутся текстом: если база
@@ -234,8 +240,8 @@ def _examples(overview: object, skills: list) -> list[tuple[str, str]]:  # type:
             )
         )
 
-    p25 = getattr(overview, "salary_p25", None)
-    p75 = getattr(overview, "salary_p75", None)
+    p25 = overview.salary_p25
+    p75 = overview.salary_p75
     if p25 and p75:
         examples.append(
             (
