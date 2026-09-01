@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hh-radar — срез рынка AI и автоматизации</title>
+<meta name="description" content="Собственная база вакансий hh.ru с полнотекстовым и семантическим поиском. Витрина собрана программой из данных базы.">
+<style>
+  :root {
+    color-scheme: light;
+    --surface: #fcfcfb;
+    --surface-2: #f4f3f0;
+    --ink: #0b0b0b;
+    --ink-2: #52514e;
+    --ink-3: #7a7873;
+    --rule: #e3e1dc;
+    --series-1: #2a78d6;
+    --series-2: #eb6834;
+    --series-3: #1baf7a;
+    --track: #e8edf5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --surface: #1a1a19;
+    --surface-2: #232322;
+    --ink: #ffffff;
+    --ink-2: #c3c2b7;
+    --ink-3: #8f8e86;
+    --rule: #383835;
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+    --track: #25303d;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --surface: #1a1a19;
+    --surface-2: #232322;
+    --ink: #ffffff;
+    --ink-2: #c3c2b7;
+    --ink-3: #8f8e86;
+    --rule: #383835;
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+    --track: #25303d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--surface);
+    color: var(--ink);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 48px 20px 96px; }
+  .head { border-bottom: 1px solid var(--rule); padding-bottom: 28px; margin-bottom: 36px; }
+  .eyebrow {
+    margin: 0 0 10px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--ink-3); font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  h1 { margin: 0 0 12px; font-size: clamp(28px, 5vw, 40px); line-height: 1.15; }
+  h2 { margin: 0 0 6px; font-size: 21px; line-height: 1.25; }
+  .lede { margin: 0 0 14px; font-size: 18px; color: var(--ink-2); max-width: 62ch; }
+  .meta { margin: 0; font-size: 14px; color: var(--ink-3); }
+  a { color: var(--series-1); }
+  .blurb { margin: 0 0 18px; font-size: 14px; color: var(--ink-2); max-width: 68ch; }
+  .block { margin: 0 0 48px; }
+  .empty { color: var(--ink-3); font-style: italic; }
+
+  .tiles {
+    display: grid; gap: 12px; margin-bottom: 48px;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  }
+  .tile {
+    background: var(--surface-2); border: 1px solid var(--rule);
+    border-radius: 10px; padding: 16px 18px;
+  }
+  .tile-title { margin: 0; font-size: 13px; color: var(--ink-2); }
+  .tile-value {
+    margin: 6px 0 2px; font-size: 27px; font-weight: 650; line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+  }
+  .tile-note { margin: 0; font-size: 12px; color: var(--ink-3); }
+
+  .bars { display: flex; flex-direction: column; gap: 9px; }
+  .bar-row {
+    display: grid; grid-template-columns: minmax(120px, 190px) 1fr auto;
+    align-items: center; gap: 14px; border-radius: 6px; outline: none;
+  }
+  .bar-row:hover, .bar-row:focus-visible { background: var(--surface-2); }
+  .bar-label { font-size: 14px; color: var(--ink-2); }
+  .bar-track { background: var(--track); border-radius: 4px; height: 12px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 4px; }
+  .bar-value {
+    font-size: 14px; font-variant-numeric: tabular-nums; color: var(--ink);
+    min-width: 68px; text-align: right;
+  }
+  @media (max-width: 560px) {
+    .bar-row { grid-template-columns: 1fr auto; }
+    .bar-track { grid-column: 1 / -1; }
+  }
+
+  .chart-scroll { overflow-x: auto; }
+  svg.timeline { width: 100%; min-width: 520px; height: auto; display: block; }
+  .grid { stroke: var(--rule); stroke-width: 1; }
+  .axis { fill: var(--ink-3); font-size: 11px; font-family: ui-monospace, monospace; }
+  .line { fill: none; stroke: var(--series-1); stroke-width: 2;
+           stroke-linejoin: round; stroke-linecap: round; }
+  .area { fill: var(--series-1); opacity: .09; }
+  .dot { fill: var(--series-1); stroke: var(--surface); stroke-width: 2; cursor: pointer; }
+  .dot:hover, .dot:focus-visible { r: 6; }
+
+  table { border-collapse: collapse; width: 100%; min-width: 420px; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--rule); }
+  th { color: var(--ink-2); font-weight: 600; font-size: 13px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+  .qa { list-style: none; padding: 0; margin: 0; display: flex;
+         flex-direction: column; gap: 16px; }
+  .qa li { border-left: 3px solid var(--series-3); padding-left: 14px; }
+  .ask { margin: 0 0 4px; font-weight: 600; }
+  .answer { margin: 0; color: var(--ink-2); font-size: 15px; }
+
+  .foot { border-top: 1px solid var(--rule); padding-top: 22px;
+           font-size: 14px; color: var(--ink-2); }
+  .foot p { margin: 0 0 10px; max-width: 68ch; }
+
+  #tip {
+    position: fixed; pointer-events: none; opacity: 0; transition: opacity .1s;
+    background: var(--ink); color: var(--surface); padding: 6px 10px;
+    border-radius: 6px; font-size: 13px; line-height: 1.4; max-width: 260px; z-index: 10;
+  }
+  #tip.on { opacity: 1; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="head">
+    <p class="eyebrow">hh-radar · витрина</p>
+    <h1>Что происходит на рынке AI и автоматизации</h1>
+    <p class="lede">
+      Страница собрана программой из собственной базы вакансий hh.ru — той же,
+      которую LLM-агент опрашивает через MCP. Ни одна цифра здесь не вписана руками.
+    </p>
+    <p class="meta">вакансии, опубликованные 21.08.2026 — 30.08.2026 · обновлено 01.09.2026 10:54 ·
+      <a href="https://github.com/Denmurzik/hh-radar">исходный код</a></p>
+  </header>
+
+  <section class="tiles" aria-label="Ключевые числа">
+    <div class="tile">
+      <p class="tile-title">вакансий в базе</p>
+      <p class="tile-value">4</p>
+      <p class="tile-note">работодателей: 3</p>
+    </div>
+    <div class="tile">
+      <p class="tile-title">медиана зарплаты</p>
+      <p class="tile-value">150 000 ₽</p>
+      <p class="tile-note">вилку указали 75% вакансий</p>
+    </div>
+    <div class="tile">
+      <p class="tile-title">удалённых вакансий</p>
+      <p class="tile-value">50%</p>
+      <p class="tile-note">по полям work_format и schedule</p>
+    </div>
+    <div class="tile">
+      <p class="tile-title">уникальных навыков</p>
+      <p class="tile-value">4</p>
+      <p class="tile-note">векторов для поиска: 1</p>
+    </div>
+  </section>
+
+  
+  <section class="block">
+    <h2>Какие навыки требуют чаще всего</h2>
+    <p class="blurb">Доля вакансий из базы, в которых навык указан в требованиях. Считается по нормализованным названиям: «Python» и «python» — один навык.</p>
+    <div class="bars">
+      <div class="bar-row" data-kind="skills" data-label="Python"
+           data-value="25%"
+           data-note="1 вакансий, медиана 150 000 ₽" tabindex="0">
+        <div class="bar-label">Python</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: 100.0%;
+               background: var(--series-1);"></div>
+        </div>
+        <div class="bar-value">25%</div>
+      </div>
+      <div class="bar-row" data-kind="skills" data-label="n8n"
+           data-value="25%"
+           data-note="1 вакансий, медиана 150 000 ₽" tabindex="0">
+        <div class="bar-label">n8n</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: 100.0%;
+               background: var(--series-1);"></div>
+        </div>
+        <div class="bar-value">25%</div>
+      </div>
+      <div class="bar-row" data-kind="skills" data-label="REST API"
+           data-value="25%"
+           data-note="1 вакансий, медиана 150 000 ₽" tabindex="0">
+        <div class="bar-label">REST API</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: 100.0%;
+               background: var(--series-1);"></div>
+        </div>
+        <div class="bar-value">25%</div>
+      </div>
+      <div class="bar-row" data-kind="skills" data-label="Docker"
+           data-value="25%"
+           data-note="1 вакансий, медиана 150 000 ₽" tabindex="0">
+        <div class="bar-label">Docker</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: 100.0%;
+               background: var(--series-1);"></div>
+        </div>
+        <div class="bar-value">25%</div>
+      </div></div>
+  </section>
+
+  
+  <section class="block">
+    <h2>Медианная зарплата по уровню опыта</h2>
+    <p class="blurb">Медиана нижней границы вилки, приведённой к рублям. Вакансии без указанной зарплаты в расчёт не входят — их доля указана в карточке выше.</p>
+    <div class="bars">
+      <div class="bar-row" data-kind="salary" data-label="Более 6 лет"
+           data-value="180 000 ₽"
+           data-note="1 вакансий с указанной вилкой" tabindex="0">
+        <div class="bar-label">Более 6 лет</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: 100.0%;
+               background: var(--series-2);"></div>
+        </div>
+        <div class="bar-value">180 000 ₽</div>
+      </div>
+      <div class="bar-row" data-kind="salary" data-label="1–3 года"
+           data-value="150 000 ₽"
+           data-note="1 вакансий с указанной вилкой" tabindex="0">
+        <div class="bar-label">1–3 года</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: 83.3%;
+               background: var(--series-2);"></div>
+        </div>
+        <div class="bar-value">150 000 ₽</div>
+      </div>
+      <div class="bar-row" data-kind="salary" data-label="Без опыта"
+           data-value="85 000 ₽"
+           data-note="1 вакансий с указанной вилкой" tabindex="0">
+        <div class="bar-label">Без опыта</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: 47.2%;
+               background: var(--series-2);"></div>
+        </div>
+        <div class="bar-value">85 000 ₽</div>
+      </div></div>
+  </section>
+
+  
+  <section class="block">
+    <h2>Сколько вакансий публикуют по неделям</h2>
+    <p class="blurb">Количество публикаций по неделям. Провалы на краях — это границы окна сбора, а не спад на рынке: показываем как есть, без сглаживания.</p>
+    <div class="chart-scroll">
+      <svg viewBox="0 0 720 220" role="img"
+           aria-label="Публикации вакансий по неделям" class="timeline">
+        <line class="grid" x1="44" x2="708" y1="190.0" y2="190.0" /><text class="axis" x="36" y="194.0" text-anchor="end">0</text><line class="grid" x1="44" x2="708" y1="132.0" y2="132.0" /><text class="axis" x="36" y="136.0" text-anchor="end">1</text><line class="grid" x1="44" x2="708" y1="74.0" y2="74.0" /><text class="axis" x="36" y="78.0" text-anchor="end">2</text><line class="grid" x1="44" x2="708" y1="16.0" y2="16.0" /><text class="axis" x="36" y="20.0" text-anchor="end">3</text>
+        <polygon class="area" points="44,190 44.0,132.0 708.0,16.0 708,190" />
+        <polyline class="line" points="44.0,132.0 708.0,16.0" />
+        <circle class="dot" cx="44.0" cy="132.0" r="4" data-label="неделя с 17.08.2026" data-value="1" tabindex="0" /><circle class="dot" cx="708.0" cy="16.0" r="4" data-label="неделя с 24.08.2026" data-value="3" tabindex="0" />
+        <text class="axis" x="44" y="212">17.08</text><text class="axis" x="708" y="212" text-anchor="end">24.08</text>
+      </svg>
+    </div>
+  </section>
+
+  
+  <section class="block">
+    <h2>Кто больше всех нанимает</h2>
+    <p class="blurb">Работодатели по числу вакансий в базе за период сбора.</p>
+    <div class="chart-scroll">
+      <table>
+        <thead><tr><th>#</th><th>Работодатель</th><th class="num">Вакансий</th></tr></thead>
+        <tbody><tr><td>1</td><td>Студия Контора</td><td class='num'>1</td></tr><tr><td>2</td><td>KiteGroup</td><td class='num'>1</td></tr><tr><td>3</td><td>Глобус-М</td><td class='num'>1</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  
+  <section class="block">
+    <h2>Что у этой базы спрашивает агент</h2>
+    <p class="blurb">Те же цифры, но через MCP: инструменты подключены к Claude Desktop,
+    и на вопрос в свободной форме агент отвечает выборкой из базы, а не догадкой.</p>
+    <ul class="qa">
+      <li>
+        <p class="ask">Какие навыки чаще всего требуют в вакансиях по AI и автоматизации?</p>
+        <p class="answer">Чаще всего — Python: 25% вакансий (1 шт.). Дальше: n8n, REST API, Docker.</p>
+      </li>
+      <li>
+        <p class="ask">На какую вилку рассчитывать?</p>
+        <p class="answer">Средние 50% вакансий с указанной зарплатой лежат между 117 500 ₽ и 165 000 ₽. Вакансии без вилки в расчёт не входят — их в базе заметная доля.</p>
+      </li>
+      <li>
+        <p class="ask">Найди вакансии, где нужно чинить чужие сломанные автоматизации.</p>
+        <p class="answer">Такое не находится по ключевым словам: в объявлениях пишут «поддержка интеграций» и «доработка существующих процессов». Это запрос к semantic_search — поиску по смыслу через pgvector.</p>
+      </li></ul>
+  </section>
+
+  <footer class="foot">
+    <p><strong>Личный проект.</strong> Написан для собственного поиска работы: искал
+    вакансии руками, надоело, автоматизировал. Данные получены через официальное API
+    hh.ru с токеном приложения, хранятся локально и показаны здесь только агрегатами.</p>
+    <p>Курсы валют для приведения зарплат — статичные и приблизительные: точность
+    здесь не нужна, нужна общая шкала для сортировки.</p>
+    <p><a href="https://github.com/Denmurzik/hh-radar">github.com/Denmurzik/hh-radar</a>
+    · <a href="data.json">данные этой страницы в JSON</a></p>
+  </footer>
+</div>
+<script id="showcase-data" type="application/json">{"generated_at": "2026-09-01T10:54:16.220939+00:00", "database": {"vacancies_total": 4, "employers_total": 3, "skills_total": 4, "chunks_total": 1, "chunks_embedded": 1, "model_name": "hash-bow-v1", "published_from": "2026-08-21T11:40:11+00:00", "published_to": "2026-08-30T05:00:00+00:00", "last_fetched_at": "2026-09-01T10:44:30.212793+00:00"}, "market": {"total": 4, "with_salary": 3, "salary_p25": 117500, "salary_p50": 150000, "salary_p75": 165000, "remote_share": 0.5, "by_experience": [{"experience_id": "between1And3", "count": 2}, {"experience_id": "noExperience", "count": 1}, {"experience_id": "moreThan6", "count": 1}], "top_employers": [{"employer_name": "Студия Контора", "count": 1}, {"employer_name": "KiteGroup", "count": 1}, {"employer_name": "Глобус-М", "count": 1}]}, "top_skills": [{"name": "python", "display_name": "Python", "vacancy_count": 1, "share": 0.25, "median_salary_from_rub": 150000}, {"name": "n8n", "display_name": "n8n", "vacancy_count": 1, "share": 0.25, "median_salary_from_rub": 150000}, {"name": "rest api", "display_name": "REST API", "vacancy_count": 1, "share": 0.25, "median_salary_from_rub": 150000}, {"name": "docker", "display_name": "Docker", "vacancy_count": 1, "share": 0.25, "median_salary_from_rub": 150000}], "salary_by_experience": [{"experience": "Более 6 лет", "median_salary_from_rub": 180000.0}, {"experience": "1–3 года", "median_salary_from_rub": 150000.0}, {"experience": "Без опыта", "median_salary_from_rub": 85000.0}], "weekly_published": [{"week_start": "2026-08-17", "count": 1}, {"week_start": "2026-08-24", "count": 3}]}</script>
+<script>
+(function () {
+  var tip = document.createElement('div');
+  tip.id = 'tip';
+  document.body.appendChild(tip);
+
+  function show(event, title, value) {
+    tip.textContent = value ? title + ': ' + value : title;
+    tip.classList.add('on');
+    move(event);
+  }
+  function move(event) {
+    var x = (event.clientX || 0) + 14;
+    var y = (event.clientY || 0) + 16;
+    var box = tip.getBoundingClientRect();
+    if (x + box.width > window.innerWidth - 8) x = window.innerWidth - box.width - 8;
+    if (y + box.height > window.innerHeight - 8) y = (event.clientY || 0) - box.height - 12;
+    tip.style.left = x + 'px';
+    tip.style.top = y + 'px';
+  }
+  function hide() { tip.classList.remove('on'); }
+
+  document.querySelectorAll('.bar-row').forEach(function (row) {
+    var note = row.dataset.note;
+    var text = row.dataset.label + (note ? ' — ' + note : '');
+    row.addEventListener('mousemove', function (e) { show(e, text, row.dataset.value); });
+    row.addEventListener('mouseleave', hide);
+    row.addEventListener('focus', function (e) { show(e, text, row.dataset.value); });
+    row.addEventListener('blur', hide);
+  });
+
+  document.querySelectorAll('.dot').forEach(function (dot) {
+    dot.addEventListener('mousemove', function (e) {
+      show(e, dot.dataset.label, dot.dataset.value + ' вакансий');
+    });
+    dot.addEventListener('mouseleave', hide);
+    dot.addEventListener('focus', function (e) {
+      show(e, dot.dataset.label, dot.dataset.value + ' вакансий');
+    });
+    dot.addEventListener('blur', hide);
+  });
+})();
+</script>
+</body>
+</html>
