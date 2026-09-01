@@ -240,7 +240,11 @@ recall в разы.
 ## Разработка
 
 ```bash
-uv sync --extra dev
+# uv sync приводит окружение в точное соответствие набору extra,
+# поэтому для разработки нужны оба: без rag не соберётся семантический поиск,
+# без dev не будет pytest.
+uv sync --extra dev --extra rag
+
 uv run pytest -q                 # юнит-тесты, база не нужна
 uv run ruff check src tests
 uv run mypy
