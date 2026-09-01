@@ -260,8 +260,10 @@ def explain(
     console.print("")
     joined = " ".join(plan)
     rows_word = plural_ru(total, "строка", "строки", "строк")
+    matched = _matched_rows(plan)
+
     if "Bitmap Index Scan" in joined or "Index Scan" in joined:
-        console.print("[green]Индекс используется.[/green]")
+        console.print("[green]GIN-индекс используется — то, что нужно.[/green]")
     elif total < 1000:
         console.print(
             "[yellow]Планировщик выбрал последовательное чтение — и правильно "
@@ -269,15 +271,35 @@ def explain(
             "дешевле, чем идти через индекс.[/yellow]"
         )
         console.print(
-            "Наберите базу командой [bold]hh-radar ingest[/bold] и повторите — "
-            "на нескольких тысячах вакансий появится Bitmap Index Scan."
+            "Наберите базу командой [bold]hh-radar ingest[/bold] и повторите с более редким словом."
         )
+    elif matched is not None and matched > total * 0.05:
+        console.print(
+            "[yellow]Последовательное чтение — и это верное решение: запрос "
+            f"совпал с {matched} {plural_ru(matched, 'строкой', 'строками', 'строками')} "
+            f"из {total}. Когда подходит заметная доля таблицы, индекс не "
+            "экономит, а добавляет работу.[/yellow]"
+        )
+        console.print("Повторите с более избирательным запросом — например, редкой технологией.")
     else:
         console.print(
-            "[red]Индекс не использован при заметном объёме данных — это стоит "
-            "разобрать: проверьте, что ix_vacancies_search_vector существует "
-            "и что статистика собрана (ANALYZE vacancies).[/red]"
+            "[red]Запрос избирательный, но индекс не использован. Проверьте, что "
+            "статистика собрана: [bold]ANALYZE vacancies[/bold]. Сборщик делает это "
+            "сам в конце прогона, но на базе, наполненной вручную, статистики "
+            "может не быть.[/red]"
         )
+
+
+def _matched_rows(plan: list[str]) -> int | None:
+    """Сколько строк реально подошло под условие, по строке Seq Scan из плана."""
+    import re
+
+    for line in plan:
+        if "Seq Scan" in line:
+            found = re.search(r"actual time=[\d.]+\.\.[\d.]+ rows=(\d+)", line)
+            if found:
+                return int(found.group(1))
+    return None
 
 
 # ---------------------------------------------------------------- витрина ---

@@ -23,7 +23,7 @@ from dataclasses import dataclass, field
 from datetime import UTC, datetime, timedelta
 from typing import Any
 
-from sqlalchemy import Row, literal_column, select
+from sqlalchemy import Row, literal_column, select, text
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.orm import Session
 
@@ -104,8 +104,25 @@ def ingest(
     if fetch_details:
         fetch_missing_details(session, client, limit=detail_limit, report=report)
 
+    refresh_statistics(session)
     report.finished_at = datetime.now(UTC)
     return report
+
+
+def refresh_statistics(session: Session) -> None:
+    """Пересобрать статистику планировщика после массовой записи.
+
+    Без этого Postgres до следующего autovacuum считает таблицу такой, какой
+    она была раньше, и выбирает план вслепую: на свежезалитой базе
+    полнотекстовый поиск идёт последовательным чтением мимо GIN-индекса.
+    Проверяется командой ``hh-radar explain``.
+
+    ANALYZE не работает внутри транзакции блока, поэтому фиксируем её.
+    """
+    session.commit()
+    session.execute(text("ANALYZE vacancies"))
+    session.execute(text("ANALYZE vacancy_skills"))
+    session.commit()
 
 
 def fetch_missing_details(
