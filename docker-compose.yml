@@ -1,0 +1,27 @@
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    container_name: hh-radar-db
+    environment:
+      POSTGRES_USER: hh
+      POSTGRES_PASSWORD: hh
+      POSTGRES_DB: hh_radar
+      # Русская морфология в полнотекстовом поиске работает через словарь russian,
+      # который есть в стандартной сборке. Локаль нужна для корректной сортировки.
+      LANG: ru_RU.utf8
+    # 5433 снаружи: чтобы не конфликтовать с локально установленным Postgres.
+    ports:
+      - "5433:5432"
+    volumes:
+      - hh-radar-pgdata:/var/lib/postgresql/data
+      - ./scripts/init-extensions.sql:/docker-entrypoint-initdb.d/10-extensions.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hh -d hh_radar"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 10s
+    restart: unless-stopped
+
+volumes:
+  hh-radar-pgdata:
