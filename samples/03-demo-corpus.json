@@ -1,0 +1,4257 @@
+{
+ "_comment": "Демонстрационный корпус. Вакансии, работодатели и зарплаты вымышлены и сгенерированы scripts/make_demo_corpus.py. Это не выгрузка с hh.ru: по этим числам нельзя судить о рынке.",
+ "items": [
+  {
+   "id": "900000007",
+   "premium": false,
+   "name": "Специалист по внедрению CRM",
+   "area": {
+    "id": "3",
+    "name": "Екатеринбург",
+    "url": "https://api.hh.ru/areas/3"
+   },
+   "salary": {
+    "from": 100000,
+    "to": null,
+    "currency": "RUR",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 100000,
+    "to": null,
+    "currency": "RUR",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-09-01T17:45:00+0300",
+   "created_at": "2026-09-01T17:45:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000007",
+   "alternate_url": "https://hh.ru/vacancy/900000007",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000007",
+   "relations": [],
+   "employer": {
+    "id": "8100012",
+    "name": "Юнион Мебель",
+    "url": "https://api.hh.ru/employers/8100012",
+    "alternate_url": "https://hh.ru/employer/8100012",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100012",
+    "accredited_it_employer": false,
+    "trusted": false
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "noExperience",
+    "name": "Нет опыта"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>Компания «Юнион Мебель» ищет специалиста в команду внутренней автоматизации.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Настраивать воронки, поля и права в CRM под процессы отдела продаж</li><li>Связывать CRM с телефонией, почтой и складским учётом</li><li>Переносить данные из старых систем без потерь</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>PHP или Python для обработчиков</li><li>REST API и вебхуки на практике</li></ul><br/><p>Есть бюджет на обучение и конференции.</p>",
+   "key_skills": [
+    {
+     "name": "Python"
+    },
+    {
+     "name": "PHP"
+    },
+    {
+     "name": "Битрикс24"
+    },
+    {
+     "name": "amoCRM"
+    },
+    {
+     "name": "Webhook"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000015",
+   "premium": false,
+   "name": "Инженер поддержки автоматизаций",
+   "area": {
+    "id": "66",
+    "name": "Нижний Новгород",
+    "url": "https://api.hh.ru/areas/66"
+   },
+   "salary": {
+    "from": 120000,
+    "to": 140000,
+    "currency": "RUR",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 120000,
+    "to": 140000,
+    "currency": "RUR",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-09-01T11:45:00+0300",
+   "created_at": "2026-09-01T11:45:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000015",
+   "alternate_url": "https://hh.ru/vacancy/900000015",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000015",
+   "relations": [],
+   "employer": {
+    "id": "8100008",
+    "name": "Дельта Букинг",
+    "url": "https://api.hh.ru/employers/8100008",
+    "alternate_url": "https://hh.ru/employer/8100008",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100008",
+    "accredited_it_employer": false,
+    "trusted": false
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "noExperience",
+    "name": "Нет опыта"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>«Дельта Букинг» расширяет команду разработки: нужен человек на задачи ниже.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Разбираться в чужом коде интеграций, который писали до вас</li><li>Приводить в порядок то, что собрано наспех и держится на костылях</li><li>Чинить сценарии, сломавшиеся после обновления внешнего API</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Спокойное отношение к задачам вида «вчера работало, сегодня нет»</li><li>Умение читать логи и воспроизводить ошибку по описанию пользователя</li><li>Python или PHP на уровне чтения и правки чужого кода</li></ul><br/><p>Есть бюджет на обучение и конференции.</p>",
+   "key_skills": [
+    {
+     "name": "Git"
+    },
+    {
+     "name": "Linux"
+    },
+    {
+     "name": "SQL"
+    },
+    {
+     "name": "REST API"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000020",
+   "premium": false,
+   "name": "Backend-разработчик Python",
+   "area": {
+    "id": "2",
+    "name": "Санкт-Петербург",
+    "url": "https://api.hh.ru/areas/2"
+   },
+   "salary": {
+    "from": 270000,
+    "to": 340000,
+    "currency": "RUR",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 270000,
+    "to": 340000,
+    "currency": "RUR",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-31T14:45:00+0300",
+   "created_at": "2026-08-31T14:45:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000020",
+   "alternate_url": "https://hh.ru/vacancy/900000020",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000020",
+   "relations": [],
+   "employer": {
+    "id": "8100012",
+    "name": "Юнион Мебель",
+    "url": "https://api.hh.ru/employers/8100012",
+    "alternate_url": "https://hh.ru/employer/8100012",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100012",
+    "accredited_it_employer": false,
+    "trusted": false
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>«Юнион Мебель» расширяет команду разработки: нужен человек на задачи ниже.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Разбирать инциденты на проде вместе с командой</li><li>Разрабатывать сервисы, на которые опираются внутренние автоматизации</li><li>Покрывать код тестами и держать их зелёными</li><li>Проектировать схему базы и писать миграции</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Python и FastAPI или Django</li><li>PostgreSQL: индексы, транзакции, планы запросов</li><li>Docker и понимание, как код доезжает до сервера</li></ul><br/><p>Небольшая команда, решения принимаются за день, а не за квартал.</p>",
+   "key_skills": [
+    {
+     "name": "FastAPI"
+    },
+    {
+     "name": "REST API"
+    },
+    {
+     "name": "SQLAlchemy"
+    },
+    {
+     "name": "Git"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000002",
+   "premium": false,
+   "name": "LLM Engineer",
+   "area": {
+    "id": "104",
+    "name": "Пермь",
+    "url": "https://api.hh.ru/areas/104"
+   },
+   "salary": {
+    "from": 170000,
+    "to": 220000,
+    "currency": "RUR",
+    "gross": false
+   },
+   "salary_range": {
+    "from": 170000,
+    "to": 220000,
+    "currency": "RUR",
+    "gross": false,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-30T18:00:00+0300",
+   "created_at": "2026-08-30T18:00:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000002",
+   "alternate_url": "https://hh.ru/vacancy/900000002",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000002",
+   "relations": [],
+   "employer": {
+    "id": "8100002",
+    "name": "Полярис Ритейл",
+    "url": "https://api.hh.ru/employers/8100002",
+    "alternate_url": "https://hh.ru/employer/8100002",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100002",
+    "accredited_it_employer": false,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>Компания «Полярис Ритейл» ищет специалиста в команду внутренней автоматизации.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Считать стоимость запросов и держать её в рамках бюджета</li><li>Встраивать языковые модели во внутренние процессы компании</li><li>Проектировать и отлаживать промпты, мерить качество ответов</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Умение объяснить, почему модель ответила именно так</li><li>Опыт с API языковых моделей и понимание их ограничений</li><li>Знакомство с векторным поиском: pgvector, Qdrant или аналоги</li></ul><br/><p>Офис в центре, но на удалёнку отпускаем без вопросов.</p>",
+   "key_skills": [
+    {
+     "name": "PostgreSQL"
+    },
+    {
+     "name": "LangChain"
+    },
+    {
+     "name": "LLM"
+    },
+    {
+     "name": "RAG"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000040",
+   "premium": false,
+   "name": "Инженер диалоговых сервисов",
+   "area": {
+    "id": "66",
+    "name": "Нижний Новгород",
+    "url": "https://api.hh.ru/areas/66"
+   },
+   "salary": {
+    "from": 190000,
+    "to": null,
+    "currency": "RUR",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 190000,
+    "to": null,
+    "currency": "RUR",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-29T11:30:00+0300",
+   "created_at": "2026-08-29T11:30:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000040",
+   "alternate_url": "https://hh.ru/vacancy/900000040",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000040",
+   "relations": [],
+   "employer": {
+    "id": "8100007",
+    "name": "Оникс Телеком",
+    "url": "https://api.hh.ru/employers/8100007",
+    "alternate_url": "https://hh.ru/employer/8100007",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100007",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>В «Оникс Телеком» набирается объём ручной работы, который пора автоматизировать.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Подключать к ботам языковые модели и базу знаний компании</li><li>Разрабатывать ботов для поддержки клиентов и внутренних заявок</li><li>Держать состояние диалога и переводить сложные случаи на оператора</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Понимание, чем бот с сценарием отличается от бота с моделью</li><li>PostgreSQL или Redis для хранения состояния</li><li>Python и asyncio, опыт с aiogram или telebot</li></ul><br/><p>Есть бюджет на обучение и конференции.</p>",
+   "key_skills": [
+    {
+     "name": "PostgreSQL"
+    },
+    {
+     "name": "Docker"
+    },
+    {
+     "name": "Telegram Bot API"
+    },
+    {
+     "name": "Python"
+    },
+    {
+     "name": "Redis"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000022",
+   "premium": false,
+   "name": "Продуктовый аналитик",
+   "area": {
+    "id": "66",
+    "name": "Нижний Новгород",
+    "url": "https://api.hh.ru/areas/66"
+   },
+   "salary": {
+    "from": 120000,
+    "to": 180000,
+    "currency": "RUR",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 120000,
+    "to": 180000,
+    "currency": "RUR",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-28T17:12:00+0300",
+   "created_at": "2026-08-28T17:12:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000022",
+   "alternate_url": "https://hh.ru/vacancy/900000022",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000022",
+   "relations": [],
+   "employer": {
+    "id": "8100006",
+    "name": "Гринфилд Агро",
+    "url": "https://api.hh.ru/employers/8100006",
+    "alternate_url": "https://hh.ru/employer/8100006",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100006",
+    "accredited_it_employer": false,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>«Гринфилд Агро» расширяет команду разработки: нужен человек на задачи ниже.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Собирать дашборды, на которые смотрит руководитель, а не аналитик</li><li>Оценивать эффект автоматизации до и после внедрения</li><li>Считать метрики процессов и показывать, где теряется время</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>SQL уверенно, Python на уровне pandas</li><li>Умение задать вопрос данным раньше, чем строить график</li></ul><br/><p>Оформление по ТК, ДМС после испытательного срока.</p>",
+   "key_skills": [
+    {
+     "name": "BI"
+    },
+    {
+     "name": "Python"
+    },
+    {
+     "name": "Pandas"
+    },
+    {
+     "name": "SQL"
+    },
+    {
+     "name": "Excel"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000011",
+   "premium": false,
+   "name": "ML Engineer",
+   "area": {
+    "id": "104",
+    "name": "Пермь",
+    "url": "https://api.hh.ru/areas/104"
+   },
+   "salary": {
+    "from": 300000,
+    "to": 320000,
+    "currency": "RUR",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 300000,
+    "to": 320000,
+    "currency": "RUR",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-28T16:12:00+0300",
+   "created_at": "2026-08-28T16:12:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000011",
+   "alternate_url": "https://hh.ru/vacancy/900000011",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000011",
+   "relations": [],
+   "employer": {
+    "id": "8100003",
+    "name": "Сигма Практика",
+    "url": "https://api.hh.ru/employers/8100003",
+    "alternate_url": "https://hh.ru/employer/8100003",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100003",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>В «Сигма Практика» набирается объём ручной работы, который пора автоматизировать.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Мерить качество на отложенной выборке и не обманывать себя метрикой</li><li>Обучать и дообучать модели под задачи классификации обращений</li><li>Готовить и чистить обучающие выборки</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Опыт с трансформерами для русского языка</li><li>Понимание, чем валидация отличается от теста</li><li>Python и PyTorch</li></ul><br/><p>Работаем удалённо, график гибкий, созвон один раз в день.</p>",
+   "key_skills": [
+    {
+     "name": "Transformers"
+    },
+    {
+     "name": "PyTorch"
+    },
+    {
+     "name": "Python"
+    },
+    {
+     "name": "SQL"
+    },
+    {
+     "name": "Docker"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000041",
+   "premium": false,
+   "name": "Инженер данных",
+   "area": {
+    "id": "4",
+    "name": "Новосибирск",
+    "url": "https://api.hh.ru/areas/4"
+   },
+   "salary": {
+    "from": 210000,
+    "to": null,
+    "currency": "RUR",
+    "gross": false
+   },
+   "salary_range": {
+    "from": 210000,
+    "to": null,
+    "currency": "RUR",
+    "gross": false,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-28T13:00:00+0300",
+   "created_at": "2026-08-28T13:00:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000041",
+   "alternate_url": "https://hh.ru/vacancy/900000041",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000041",
+   "relations": [],
+   "employer": {
+    "id": "8100006",
+    "name": "Гринфилд Агро",
+    "url": "https://api.hh.ru/employers/8100006",
+    "alternate_url": "https://hh.ru/employer/8100006",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100006",
+    "accredited_it_employer": false,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between3And6",
+    "name": "От 3 до 6 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>В «Гринфилд Агро» набирается объём ручной работы, который пора автоматизировать.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Настраивать мониторинг свежести данных</li><li>Описывать расчёты витрин и следить за их корректностью</li><li>Строить и поддерживать пайплайны загрузки данных в хранилище</li><li>Оптимизировать тяжёлые запросы и планы выполнения</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Python для оркестрации, Airflow или аналог</li><li>Опыт с колоночными хранилищами будет плюсом</li></ul><br/><p>Есть бюджет на обучение и конференции.</p>",
+   "key_skills": [
+    {
+     "name": "Python"
+    },
+    {
+     "name": "Airflow"
+    },
+    {
+     "name": "SQL"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000047",
+   "premium": false,
+   "name": "ML Engineer",
+   "area": {
+    "id": "88",
+    "name": "Казань",
+    "url": "https://api.hh.ru/areas/88"
+   },
+   "salary": {
+    "from": 210000,
+    "to": 250000,
+    "currency": "RUR",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 210000,
+    "to": 250000,
+    "currency": "RUR",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-28T09:12:00+0300",
+   "created_at": "2026-08-28T09:12:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000047",
+   "alternate_url": "https://hh.ru/vacancy/900000047",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000047",
+   "relations": [],
+   "employer": {
+    "id": "8100008",
+    "name": "Дельта Букинг",
+    "url": "https://api.hh.ru/employers/8100008",
+    "alternate_url": "https://hh.ru/employer/8100008",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100008",
+    "accredited_it_employer": false,
+    "trusted": false
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>Компания «Дельта Букинг» ищет специалиста в команду внутренней автоматизации.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Обучать и дообучать модели под задачи классификации обращений</li><li>Готовить и чистить обучающие выборки</li><li>Мерить качество на отложенной выборке и не обманывать себя метрикой</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Python и PyTorch</li><li>Опыт с трансформерами для русского языка</li></ul><br/><p>Работаем удалённо, график гибкий, созвон один раз в день.</p>",
+   "key_skills": [
+    {
+     "name": "Python"
+    },
+    {
+     "name": "NLP"
+    },
+    {
+     "name": "SQL"
+    },
+    {
+     "name": "Docker"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000038",
+   "premium": false,
+   "name": "LLM Engineer",
+   "area": {
+    "id": "104",
+    "name": "Пермь",
+    "url": "https://api.hh.ru/areas/104"
+   },
+   "salary": {
+    "from": 170000,
+    "to": 210000,
+    "currency": "RUR",
+    "gross": false
+   },
+   "salary_range": {
+    "from": 170000,
+    "to": 210000,
+    "currency": "RUR",
+    "gross": false,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-27T17:45:00+0300",
+   "created_at": "2026-08-27T17:45:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000038",
+   "alternate_url": "https://hh.ru/vacancy/900000038",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000038",
+   "relations": [],
+   "employer": {
+    "id": "8100005",
+    "name": "Мосты Финтех",
+    "url": "https://api.hh.ru/employers/8100005",
+    "alternate_url": "https://hh.ru/employer/8100005",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100005",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>«Мосты Финтех» расширяет команду разработки: нужен человек на задачи ниже.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Собирать RAG-пайплайны поверх корпоративной базы знаний</li><li>Считать стоимость запросов и держать её в рамках бюджета</li><li>Подключать модели к внешним инструментам через функции и MCP</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Опыт с API языковых моделей и понимание их ограничений</li><li>Python на уровне продакшен-кода, а не блокнотов</li><li>Знакомство с векторным поиском: pgvector, Qdrant или аналоги</li></ul><br/><p>Есть бюджет на обучение и конференции.</p>",
+   "key_skills": [
+    {
+     "name": "Docker"
+    },
+    {
+     "name": "LangChain"
+    },
+    {
+     "name": "Python"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000036",
+   "premium": false,
+   "name": "Специалист по работе с LLM",
+   "area": {
+    "id": "66",
+    "name": "Нижний Новгород",
+    "url": "https://api.hh.ru/areas/66"
+   },
+   "salary": {
+    "from": 736842,
+    "to": 1052631,
+    "currency": "KZT",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 736842,
+    "to": 1052631,
+    "currency": "KZT",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-27T16:45:00+0300",
+   "created_at": "2026-08-27T16:45:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000036",
+   "alternate_url": "https://hh.ru/vacancy/900000036",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000036",
+   "relations": [],
+   "employer": {
+    "id": "8100013",
+    "name": "Прайм Логистика",
+    "url": "https://api.hh.ru/employers/8100013",
+    "alternate_url": "https://hh.ru/employer/8100013",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100013",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>«Прайм Логистика» расширяет команду разработки: нужен человек на задачи ниже.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Писать и отлаживать промпты для внутренних сценариев</li><li>Собирать наборы примеров и проверять на них ответы модели</li><li>Обучать коллег пользоваться готовыми сценариями</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Базовый Python — плюс, но не обязателен</li><li>Опыт работы с языковыми моделями в рабочих задачах</li></ul><br/><p>Испытательный срок — два месяца, зарплата на нём не режется.</p>",
+   "key_skills": [
+    {
+     "name": "Анализ данных"
+    },
+    {
+     "name": "LLM"
+    },
+    {
+     "name": "Промпт-инжиниринг"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000032",
+   "premium": false,
+   "name": "Backend-разработчик Python",
+   "area": {
+    "id": "76",
+    "name": "Ростов-на-Дону",
+    "url": "https://api.hh.ru/areas/76"
+   },
+   "salary": {
+    "from": 170000,
+    "to": null,
+    "currency": "RUR",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 170000,
+    "to": null,
+    "currency": "RUR",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-27T16:15:00+0300",
+   "created_at": "2026-08-27T16:15:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000032",
+   "alternate_url": "https://hh.ru/vacancy/900000032",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000032",
+   "relations": [],
+   "employer": {
+    "id": "8100006",
+    "name": "Гринфилд Агро",
+    "url": "https://api.hh.ru/employers/8100006",
+    "alternate_url": "https://hh.ru/employer/8100006",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100006",
+    "accredited_it_employer": false,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between3And6",
+    "name": "От 3 до 6 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>Компания «Гринфилд Агро» ищет специалиста в команду внутренней автоматизации.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Разбирать инциденты на проде вместе с командой</li><li>Покрывать код тестами и держать их зелёными</li><li>Проектировать схему базы и писать миграции</li><li>Разрабатывать сервисы, на которые опираются внутренние автоматизации</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Docker и понимание, как код доезжает до сервера</li><li>PostgreSQL: индексы, транзакции, планы запросов</li><li>Python и FastAPI или Django</li></ul><br/><p>Гибрид: два дня в офисе, остальное из дома.</p>",
+   "key_skills": [
+    {
+     "name": "Python"
+    },
+    {
+     "name": "Docker"
+    },
+    {
+     "name": "REST API"
+    },
+    {
+     "name": "FastAPI"
+    },
+    {
+     "name": "SQLAlchemy"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000001",
+   "premium": false,
+   "name": "Специалист по автоматизации бизнес-процессов",
+   "area": {
+    "id": "88",
+    "name": "Казань",
+    "url": "https://api.hh.ru/areas/88"
+   },
+   "salary": {
+    "from": 110000,
+    "to": null,
+    "currency": "RUR",
+    "gross": false
+   },
+   "salary_range": {
+    "from": 110000,
+    "to": null,
+    "currency": "RUR",
+    "gross": false,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-27T16:00:00+0300",
+   "created_at": "2026-08-27T16:00:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000001",
+   "alternate_url": "https://hh.ru/vacancy/900000001",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000001",
+   "relations": [],
+   "employer": {
+    "id": "8100014",
+    "name": "Сфера Медиа",
+    "url": "https://api.hh.ru/employers/8100014",
+    "alternate_url": "https://hh.ru/employer/8100014",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100014",
+    "accredited_it_employer": false,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>«Сфера Медиа» расширяет команду разработки: нужен человек на задачи ниже.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Переносить существующие сценарии с Make на self-hosted n8n</li><li>Подключать внутренние сервисы по REST API и вебхукам</li><li>Собирать сценарии в n8n: от выгрузки заявок до уведомлений в мессенджеры</li><li>Писать кастомные ноды на TypeScript, когда готовых не хватает</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Понимание REST, вебхуков и авторизации по токену</li><li>Опыт с n8n, Make или Zapier от полугода</li><li>Python или JavaScript на уровне уверенного скриптования</li></ul><br/><p>Оформление по ТК, ДМС после испытательного срока.</p>",
+   "key_skills": [
+    {
+     "name": "JavaScript"
+    },
+    {
+     "name": "REST API"
+    },
+    {
+     "name": "PostgreSQL"
+    },
+    {
+     "name": "Docker"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000019",
+   "premium": false,
+   "name": "Интегратор CRM (amoCRM / Битрикс24)",
+   "area": {
+    "id": "1",
+    "name": "Москва",
+    "url": "https://api.hh.ru/areas/1"
+   },
+   "salary": {
+    "from": 90000,
+    "to": 120000,
+    "currency": "RUR",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 90000,
+    "to": 120000,
+    "currency": "RUR",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-26T19:00:00+0300",
+   "created_at": "2026-08-26T19:00:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000019",
+   "alternate_url": "https://hh.ru/vacancy/900000019",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000019",
+   "relations": [],
+   "employer": {
+    "id": "8100011",
+    "name": "Астра Клиники",
+    "url": "https://api.hh.ru/employers/8100011",
+    "alternate_url": "https://hh.ru/employer/8100011",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100011",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "noExperience",
+    "name": "Нет опыта"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>Мы в «Астра Клиники» строим внутренние сервисы и ищем человека, который их разовьёт.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Связывать CRM с телефонией, почтой и складским учётом</li><li>Писать обработчики вебхуков для нестандартных сценариев</li><li>Переносить данные из старых систем без потерь</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Опыт внедрения amoCRM или Битрикс24</li><li>PHP или Python для обработчиков</li></ul><br/><p>Работаем удалённо, график гибкий, созвон один раз в день.</p>",
+   "key_skills": [
+    {
+     "name": "PHP"
+    },
+    {
+     "name": "Webhook"
+    },
+    {
+     "name": "Python"
+    },
+    {
+     "name": "REST API"
+    },
+    {
+     "name": "amoCRM"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000012",
+   "premium": false,
+   "name": "Специалист по работе с LLM",
+   "area": {
+    "id": "66",
+    "name": "Нижний Новгород",
+    "url": "https://api.hh.ru/areas/66"
+   },
+   "salary": {
+    "from": 110000,
+    "to": null,
+    "currency": "RUR",
+    "gross": false
+   },
+   "salary_range": {
+    "from": 110000,
+    "to": null,
+    "currency": "RUR",
+    "gross": false,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-26T09:30:00+0300",
+   "created_at": "2026-08-26T09:30:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000012",
+   "alternate_url": "https://hh.ru/vacancy/900000012",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000012",
+   "relations": [],
+   "employer": {
+    "id": "8100005",
+    "name": "Мосты Финтех",
+    "url": "https://api.hh.ru/employers/8100005",
+    "alternate_url": "https://hh.ru/employer/8100005",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100005",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "noExperience",
+    "name": "Нет опыта"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>В «Мосты Финтех» набирается объём ручной работы, который пора автоматизировать.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Обучать коллег пользоваться готовыми сценариями</li><li>Собирать наборы примеров и проверять на них ответы модели</li><li>Писать и отлаживать промпты для внутренних сценариев</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Аккуратность в формулировках и умение мерить результат</li><li>Опыт работы с языковыми моделями в рабочих задачах</li><li>Базовый Python — плюс, но не обязателен</li></ul><br/><p>Гибрид: два дня в офисе, остальное из дома.</p>",
+   "key_skills": [
+    {
+     "name": "Анализ данных"
+    },
+    {
+     "name": "LLM"
+    },
+    {
+     "name": "Промпт-инжиниринг"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000043",
+   "premium": false,
+   "name": "Специалист по внедрению CRM",
+   "area": {
+    "id": "2",
+    "name": "Санкт-Петербург",
+    "url": "https://api.hh.ru/areas/2"
+   },
+   "salary": {
+    "from": 100000,
+    "to": 150000,
+    "currency": "RUR",
+    "gross": false
+   },
+   "salary_range": {
+    "from": 100000,
+    "to": 150000,
+    "currency": "RUR",
+    "gross": false,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-25T16:12:00+0300",
+   "created_at": "2026-08-25T16:12:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000043",
+   "alternate_url": "https://hh.ru/vacancy/900000043",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000043",
+   "relations": [],
+   "employer": {
+    "id": "8100002",
+    "name": "Полярис Ритейл",
+    "url": "https://api.hh.ru/employers/8100002",
+    "alternate_url": "https://hh.ru/employer/8100002",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100002",
+    "accredited_it_employer": false,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "noExperience",
+    "name": "Нет опыта"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>Мы в «Полярис Ритейл» строим внутренние сервисы и ищем человека, который их разовьёт.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Связывать CRM с телефонией, почтой и складским учётом</li><li>Настраивать воронки, поля и права в CRM под процессы отдела продаж</li><li>Писать обработчики вебхуков для нестандартных сценариев</li><li>Переносить данные из старых систем без потерь</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Опыт внедрения amoCRM или Битрикс24</li><li>REST API и вебхуки на практике</li></ul><br/><p>Оформление по ТК, ДМС после испытательного срока.</p>",
+   "key_skills": [
+    {
+     "name": "Python"
+    },
+    {
+     "name": "Webhook"
+    },
+    {
+     "name": "REST API"
+    },
+    {
+     "name": "PHP"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000045",
+   "premium": false,
+   "name": "Инженер роботизации процессов",
+   "area": {
+    "id": "2",
+    "name": "Санкт-Петербург",
+    "url": "https://api.hh.ru/areas/2"
+   },
+   "salary": null,
+   "salary_range": null,
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-25T12:12:00+0300",
+   "created_at": "2026-08-25T12:12:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000045",
+   "alternate_url": "https://hh.ru/vacancy/900000045",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000045",
+   "relations": [],
+   "employer": {
+    "id": "8100001",
+    "name": "Кедр Диджитал",
+    "url": "https://api.hh.ru/employers/8100001",
+    "alternate_url": "https://hh.ru/employer/8100001",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100001",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between3And6",
+    "name": "От 3 до 6 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>«Кедр Диджитал» расширяет команду разработки: нужен человек на задачи ниже.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Разбирать входящие документы и переносить данные между системами</li><li>Поддерживать роботов, когда интерфейсы систем меняются</li><li>Роботизировать рутину бухгалтерии и кадрового учёта</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Python, работа с таблицами и документами</li><li>Опыт с RPA-платформами или собственными скриптами</li><li>Внимание к краевым случаям: робот не догадается, человек догадается</li></ul><br/><p>Небольшая команда, решения принимаются за день, а не за квартал.</p>",
+   "key_skills": [
+    {
+     "name": "1С"
+    },
+    {
+     "name": "Python"
+    },
+    {
+     "name": "RPA"
+    },
+    {
+     "name": "SQL"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000006",
+   "premium": false,
+   "name": "MLOps-инженер",
+   "area": {
+    "id": "4",
+    "name": "Новосибирск",
+    "url": "https://api.hh.ru/areas/4"
+   },
+   "salary": {
+    "from": 350000,
+    "to": null,
+    "currency": "RUR",
+    "gross": false
+   },
+   "salary_range": {
+    "from": 350000,
+    "to": null,
+    "currency": "RUR",
+    "gross": false,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-24T19:15:00+0300",
+   "created_at": "2026-08-24T19:15:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000006",
+   "alternate_url": "https://hh.ru/vacancy/900000006",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000006",
+   "relations": [],
+   "employer": {
+    "id": "8100002",
+    "name": "Полярис Ритейл",
+    "url": "https://api.hh.ru/employers/8100002",
+    "alternate_url": "https://hh.ru/employer/8100002",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100002",
+    "accredited_it_employer": false,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between3And6",
+    "name": "От 3 до 6 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>Компания «Полярис Ритейл» ищет специалиста в команду внутренней автоматизации.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Держать воспроизводимость экспериментов и версионирование весов</li><li>Заворачивать модели в сервисы и выкатывать их в кластер</li><li>Отвечать за доступность инференса под нагрузкой</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Python и понимание жизненного цикла модели</li><li>Опыт с очередями и мониторингом</li></ul><br/><p>Оформление по ТК, ДМС после испытательного срока.</p>",
+   "key_skills": [
+    {
+     "name": "Linux"
+    },
+    {
+     "name": "Python"
+    },
+    {
+     "name": "MLflow"
+    },
+    {
+     "name": "Terraform"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000048",
+   "premium": false,
+   "name": "Промпт-инженер",
+   "area": {
+    "id": "2",
+    "name": "Санкт-Петербург",
+    "url": "https://api.hh.ru/areas/2"
+   },
+   "salary": null,
+   "salary_range": null,
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-24T18:30:00+0300",
+   "created_at": "2026-08-24T18:30:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000048",
+   "alternate_url": "https://hh.ru/vacancy/900000048",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000048",
+   "relations": [],
+   "employer": {
+    "id": "8100010",
+    "name": "Речной Порт Групп",
+    "url": "https://api.hh.ru/employers/8100010",
+    "alternate_url": "https://hh.ru/employer/8100010",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100010",
+    "accredited_it_employer": false,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "noExperience",
+    "name": "Нет опыта"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>Мы в «Речной Порт Групп» строим внутренние сервисы и ищем человека, который их разовьёт.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Обучать коллег пользоваться готовыми сценариями</li><li>Писать и отлаживать промпты для внутренних сценариев</li><li>Собирать наборы примеров и проверять на них ответы модели</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Аккуратность в формулировках и умение мерить результат</li><li>Базовый Python — плюс, но не обязателен</li></ul><br/><p>Работаем удалённо, график гибкий, созвон один раз в день.</p>",
+   "key_skills": [
+    {
+     "name": "LLM"
+    },
+    {
+     "name": "Промпт-инжиниринг"
+    },
+    {
+     "name": "Анализ данных"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000008",
+   "premium": false,
+   "name": "Backend-разработчик Python",
+   "area": {
+    "id": "1",
+    "name": "Москва",
+    "url": "https://api.hh.ru/areas/1"
+   },
+   "salary": null,
+   "salary_range": null,
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-23T14:30:00+0300",
+   "created_at": "2026-08-23T14:30:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000008",
+   "alternate_url": "https://hh.ru/vacancy/900000008",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000008",
+   "relations": [],
+   "employer": {
+    "id": "8100003",
+    "name": "Сигма Практика",
+    "url": "https://api.hh.ru/employers/8100003",
+    "alternate_url": "https://hh.ru/employer/8100003",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100003",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>В «Сигма Практика» набирается объём ручной работы, который пора автоматизировать.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Покрывать код тестами и держать их зелёными</li><li>Проектировать схему базы и писать миграции</li><li>Разбирать инциденты на проде вместе с командой</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>PostgreSQL: индексы, транзакции, планы запросов</li><li>Docker и понимание, как код доезжает до сервера</li><li>Python и FastAPI или Django</li></ul><br/><p>Испытательный срок — два месяца, зарплата на нём не режется.</p>",
+   "key_skills": [
+    {
+     "name": "FastAPI"
+    },
+    {
+     "name": "Python"
+    },
+    {
+     "name": "Git"
+    },
+    {
+     "name": "SQLAlchemy"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000017",
+   "premium": false,
+   "name": "Data Engineer",
+   "area": {
+    "id": "4",
+    "name": "Новосибирск",
+    "url": "https://api.hh.ru/areas/4"
+   },
+   "salary": {
+    "from": 200000,
+    "to": null,
+    "currency": "RUR",
+    "gross": false
+   },
+   "salary_range": {
+    "from": 200000,
+    "to": null,
+    "currency": "RUR",
+    "gross": false,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-23T12:00:00+0300",
+   "created_at": "2026-08-23T12:00:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000017",
+   "alternate_url": "https://hh.ru/vacancy/900000017",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000017",
+   "relations": [],
+   "employer": {
+    "id": "8100008",
+    "name": "Дельта Букинг",
+    "url": "https://api.hh.ru/employers/8100008",
+    "alternate_url": "https://hh.ru/employer/8100008",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100008",
+    "accredited_it_employer": false,
+    "trusted": false
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between3And6",
+    "name": "От 3 до 6 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>Компания «Дельта Букинг» ищет специалиста в команду внутренней автоматизации.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Настраивать мониторинг свежести данных</li><li>Строить и поддерживать пайплайны загрузки данных в хранилище</li><li>Оптимизировать тяжёлые запросы и планы выполнения</li><li>Описывать расчёты витрин и следить за их корректностью</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Опыт с колоночными хранилищами будет плюсом</li><li>Python для оркестрации, Airflow или аналог</li><li>SQL на уровне оконных функций и разбора планов</li></ul><br/><p>Есть бюджет на обучение и конференции.</p>",
+   "key_skills": [
+    {
+     "name": "PostgreSQL"
+    },
+    {
+     "name": "Docker"
+    },
+    {
+     "name": "ETL"
+    },
+    {
+     "name": "SQL"
+    },
+    {
+     "name": "ClickHouse"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000023",
+   "premium": false,
+   "name": "ML Engineer",
+   "area": {
+    "id": "66",
+    "name": "Нижний Новгород",
+    "url": "https://api.hh.ru/areas/66"
+   },
+   "salary": {
+    "from": 3666,
+    "to": null,
+    "currency": "USD",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 3666,
+    "to": null,
+    "currency": "USD",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-23T11:00:00+0300",
+   "created_at": "2026-08-23T11:00:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000023",
+   "alternate_url": "https://hh.ru/vacancy/900000023",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000023",
+   "relations": [],
+   "employer": {
+    "id": "8100014",
+    "name": "Сфера Медиа",
+    "url": "https://api.hh.ru/employers/8100014",
+    "alternate_url": "https://hh.ru/employer/8100014",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100014",
+    "accredited_it_employer": false,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>В «Сфера Медиа» набирается объём ручной работы, который пора автоматизировать.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Мерить качество на отложенной выборке и не обманывать себя метрикой</li><li>Готовить и чистить обучающие выборки</li><li>Обучать и дообучать модели под задачи классификации обращений</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Python и PyTorch</li><li>Понимание, чем валидация отличается от теста</li></ul><br/><p>Испытательный срок — два месяца, зарплата на нём не режется.</p>",
+   "key_skills": [
+    {
+     "name": "SQL"
+    },
+    {
+     "name": "PyTorch"
+    },
+    {
+     "name": "Python"
+    },
+    {
+     "name": "NLP"
+    },
+    {
+     "name": "Transformers"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000021",
+   "premium": false,
+   "name": "Инженер роботизации процессов",
+   "area": {
+    "id": "2",
+    "name": "Санкт-Петербург",
+    "url": "https://api.hh.ru/areas/2"
+   },
+   "salary": {
+    "from": 180000,
+    "to": null,
+    "currency": "RUR",
+    "gross": false
+   },
+   "salary_range": {
+    "from": 180000,
+    "to": null,
+    "currency": "RUR",
+    "gross": false,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-17T19:30:00+0300",
+   "created_at": "2026-08-17T19:30:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000021",
+   "alternate_url": "https://hh.ru/vacancy/900000021",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000021",
+   "relations": [],
+   "employer": {
+    "id": "8100005",
+    "name": "Мосты Финтех",
+    "url": "https://api.hh.ru/employers/8100005",
+    "alternate_url": "https://hh.ru/employer/8100005",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100005",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>Мы в «Мосты Финтех» строим внутренние сервисы и ищем человека, который их разовьёт.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Разбирать входящие документы и переносить данные между системами</li><li>Поддерживать роботов, когда интерфейсы систем меняются</li><li>Роботизировать рутину бухгалтерии и кадрового учёта</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Python, работа с таблицами и документами</li><li>Опыт с RPA-платформами или собственными скриптами</li><li>Внимание к краевым случаям: робот не догадается, человек догадается</li></ul><br/><p>Офис в центре, но на удалёнку отпускаем без вопросов.</p>",
+   "key_skills": [
+    {
+     "name": "1С"
+    },
+    {
+     "name": "RPA"
+    },
+    {
+     "name": "SQL"
+    },
+    {
+     "name": "Python"
+    },
+    {
+     "name": "Selenium"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000005",
+   "premium": false,
+   "name": "Data Engineer",
+   "area": {
+    "id": "88",
+    "name": "Казань",
+    "url": "https://api.hh.ru/areas/88"
+   },
+   "salary": {
+    "from": 310000,
+    "to": 350000,
+    "currency": "RUR",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 310000,
+    "to": 350000,
+    "currency": "RUR",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-17T18:30:00+0300",
+   "created_at": "2026-08-17T18:30:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000005",
+   "alternate_url": "https://hh.ru/vacancy/900000005",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000005",
+   "relations": [],
+   "employer": {
+    "id": "8100007",
+    "name": "Оникс Телеком",
+    "url": "https://api.hh.ru/employers/8100007",
+    "alternate_url": "https://hh.ru/employer/8100007",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100007",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between3And6",
+    "name": "От 3 до 6 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>«Оникс Телеком» расширяет команду разработки: нужен человек на задачи ниже.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Описывать расчёты витрин и следить за их корректностью</li><li>Строить и поддерживать пайплайны загрузки данных в хранилище</li><li>Настраивать мониторинг свежести данных</li><li>Оптимизировать тяжёлые запросы и планы выполнения</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Python для оркестрации, Airflow или аналог</li><li>SQL на уровне оконных функций и разбора планов</li><li>Опыт с колоночными хранилищами будет плюсом</li></ul><br/><p>Работаем удалённо, график гибкий, созвон один раз в день.</p>",
+   "key_skills": [
+    {
+     "name": "ClickHouse"
+    },
+    {
+     "name": "Python"
+    },
+    {
+     "name": "ETL"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000013",
+   "premium": false,
+   "name": "Automation Engineer (n8n / Make)",
+   "area": {
+    "id": "76",
+    "name": "Ростов-на-Дону",
+    "url": "https://api.hh.ru/areas/76"
+   },
+   "salary": {
+    "from": 180000,
+    "to": 240000,
+    "currency": "RUR",
+    "gross": false
+   },
+   "salary_range": {
+    "from": 180000,
+    "to": 240000,
+    "currency": "RUR",
+    "gross": false,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-16T09:15:00+0300",
+   "created_at": "2026-08-16T09:15:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000013",
+   "alternate_url": "https://hh.ru/vacancy/900000013",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000013",
+   "relations": [],
+   "employer": {
+    "id": "8100007",
+    "name": "Оникс Телеком",
+    "url": "https://api.hh.ru/employers/8100007",
+    "alternate_url": "https://hh.ru/employer/8100007",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100007",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>Компания «Оникс Телеком» ищет специалиста в команду внутренней автоматизации.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Следить за очередями и разбирать упавшие запуски</li><li>Переносить существующие сценарии с Make на self-hosted n8n</li><li>Писать кастомные ноды на TypeScript, когда готовых не хватает</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Python или JavaScript на уровне уверенного скриптования</li><li>Docker на уровне «поднять, посмотреть логи, починить»</li><li>Опыт с n8n, Make или Zapier от полугода</li></ul><br/><p>Есть бюджет на обучение и конференции.</p>",
+   "key_skills": [
+    {
+     "name": "Webhook"
+    },
+    {
+     "name": "Docker"
+    },
+    {
+     "name": "JavaScript"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000025",
+   "premium": false,
+   "name": "Разработчик интеграций n8n",
+   "area": {
+    "id": "104",
+    "name": "Пермь",
+    "url": "https://api.hh.ru/areas/104"
+   },
+   "salary": {
+    "from": 150000,
+    "to": 220000,
+    "currency": "RUR",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 150000,
+    "to": 220000,
+    "currency": "RUR",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-15T09:15:00+0300",
+   "created_at": "2026-08-15T09:15:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000025",
+   "alternate_url": "https://hh.ru/vacancy/900000025",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000025",
+   "relations": [],
+   "employer": {
+    "id": "8100002",
+    "name": "Полярис Ритейл",
+    "url": "https://api.hh.ru/employers/8100002",
+    "alternate_url": "https://hh.ru/employer/8100002",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100002",
+    "accredited_it_employer": false,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "noExperience",
+    "name": "Нет опыта"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>Мы в «Полярис Ритейл» строим внутренние сервисы и ищем человека, который их разовьёт.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Подключать внутренние сервисы по REST API и вебхукам</li><li>Писать кастомные ноды на TypeScript, когда готовых не хватает</li><li>Собирать сценарии в n8n: от выгрузки заявок до уведомлений в мессенджеры</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Python или JavaScript на уровне уверенного скриптования</li><li>Docker на уровне «поднять, посмотреть логи, починить»</li></ul><br/><p>Офис в центре, но на удалёнку отпускаем без вопросов.</p>",
+   "key_skills": [
+    {
+     "name": "Webhook"
+    },
+    {
+     "name": "PostgreSQL"
+    },
+    {
+     "name": "REST API"
+    },
+    {
+     "name": "JavaScript"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000003",
+   "premium": false,
+   "name": "Специалист по сопровождению интеграций",
+   "area": {
+    "id": "3",
+    "name": "Екатеринбург",
+    "url": "https://api.hh.ru/areas/3"
+   },
+   "salary": {
+    "from": 90000,
+    "to": 170000,
+    "currency": "RUR",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 90000,
+    "to": 170000,
+    "currency": "RUR",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-14T13:15:00+0300",
+   "created_at": "2026-08-14T13:15:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000003",
+   "alternate_url": "https://hh.ru/vacancy/900000003",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000003",
+   "relations": [],
+   "employer": {
+    "id": "8100014",
+    "name": "Сфера Медиа",
+    "url": "https://api.hh.ru/employers/8100014",
+    "alternate_url": "https://hh.ru/employer/8100014",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100014",
+    "accredited_it_employer": false,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>«Сфера Медиа» расширяет команду разработки: нужен человек на задачи ниже.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Чинить сценарии, сломавшиеся после обновления внешнего API</li><li>Приводить в порядок то, что собрано наспех и держится на костылях</li><li>Восстанавливать работу выгрузок после сбоев и разбирать причины</li><li>Дорабатывать существующие процессы под новые требования отделов</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Умение читать логи и воспроизводить ошибку по описанию пользователя</li><li>Спокойное отношение к задачам вида «вчера работало, сегодня нет»</li><li>Python или PHP на уровне чтения и правки чужого кода</li></ul><br/><p>Офис в центре, но на удалёнку отпускаем без вопросов.</p>",
+   "key_skills": [
+    {
+     "name": "SQL"
+    },
+    {
+     "name": "Docker"
+    },
+    {
+     "name": "Python"
+    },
+    {
+     "name": "Git"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000039",
+   "premium": false,
+   "name": "Разработчик доработок интеграций",
+   "area": {
+    "id": "76",
+    "name": "Ростов-на-Дону",
+    "url": "https://api.hh.ru/areas/76"
+   },
+   "salary": {
+    "from": 130000,
+    "to": 190000,
+    "currency": "RUR",
+    "gross": false
+   },
+   "salary_range": {
+    "from": 130000,
+    "to": 190000,
+    "currency": "RUR",
+    "gross": false,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-14T11:00:00+0300",
+   "created_at": "2026-08-14T11:00:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000039",
+   "alternate_url": "https://hh.ru/vacancy/900000039",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000039",
+   "relations": [],
+   "employer": {
+    "id": "8100008",
+    "name": "Дельта Букинг",
+    "url": "https://api.hh.ru/employers/8100008",
+    "alternate_url": "https://hh.ru/employer/8100008",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100008",
+    "accredited_it_employer": false,
+    "trusted": false
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>Компания «Дельта Букинг» ищет специалиста в команду внутренней автоматизации.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Приводить в порядок то, что собрано наспех и держится на костылях</li><li>Восстанавливать работу выгрузок после сбоев и разбирать причины</li><li>Дорабатывать существующие процессы под новые требования отделов</li><li>Чинить сценарии, сломавшиеся после обновления внешнего API</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Умение читать логи и воспроизводить ошибку по описанию пользователя</li><li>Python или PHP на уровне чтения и правки чужого кода</li><li>Спокойное отношение к задачам вида «вчера работало, сегодня нет»</li></ul><br/><p>Гибрид: два дня в офисе, остальное из дома.</p>",
+   "key_skills": [
+    {
+     "name": "REST API"
+    },
+    {
+     "name": "Docker"
+    },
+    {
+     "name": "Python"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000014",
+   "premium": false,
+   "name": "AI-инженер (LLM)",
+   "area": {
+    "id": "76",
+    "name": "Ростов-на-Дону",
+    "url": "https://api.hh.ru/areas/76"
+   },
+   "salary": {
+    "from": 290000,
+    "to": null,
+    "currency": "RUR",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 290000,
+    "to": null,
+    "currency": "RUR",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-14T09:30:00+0300",
+   "created_at": "2026-08-14T09:30:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000014",
+   "alternate_url": "https://hh.ru/vacancy/900000014",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000014",
+   "relations": [],
+   "employer": {
+    "id": "8100010",
+    "name": "Речной Порт Групп",
+    "url": "https://api.hh.ru/employers/8100010",
+    "alternate_url": "https://hh.ru/employer/8100010",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100010",
+    "accredited_it_employer": false,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>«Речной Порт Групп» расширяет команду разработки: нужен человек на задачи ниже.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Проектировать и отлаживать промпты, мерить качество ответов</li><li>Считать стоимость запросов и держать её в рамках бюджета</li><li>Собирать RAG-пайплайны поверх корпоративной базы знаний</li><li>Подключать модели к внешним инструментам через функции и MCP</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Знакомство с векторным поиском: pgvector, Qdrant или аналоги</li><li>Опыт с API языковых моделей и понимание их ограничений</li></ul><br/><p>Гибрид: два дня в офисе, остальное из дома.</p>",
+   "key_skills": [
+    {
+     "name": "Docker"
+    },
+    {
+     "name": "Python"
+    },
+    {
+     "name": "LLM"
+    },
+    {
+     "name": "RAG"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000029",
+   "premium": false,
+   "name": "Data Engineer",
+   "area": {
+    "id": "2",
+    "name": "Санкт-Петербург",
+    "url": "https://api.hh.ru/areas/2"
+   },
+   "salary": null,
+   "salary_range": null,
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-13T12:15:00+0300",
+   "created_at": "2026-08-13T12:15:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000029",
+   "alternate_url": "https://hh.ru/vacancy/900000029",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000029",
+   "relations": [],
+   "employer": {
+    "id": "8100003",
+    "name": "Сигма Практика",
+    "url": "https://api.hh.ru/employers/8100003",
+    "alternate_url": "https://hh.ru/employer/8100003",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100003",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>«Сигма Практика» расширяет команду разработки: нужен человек на задачи ниже.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Описывать расчёты витрин и следить за их корректностью</li><li>Строить и поддерживать пайплайны загрузки данных в хранилище</li><li>Оптимизировать тяжёлые запросы и планы выполнения</li><li>Настраивать мониторинг свежести данных</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Python для оркестрации, Airflow или аналог</li><li>Опыт с колоночными хранилищами будет плюсом</li><li>SQL на уровне оконных функций и разбора планов</li></ul><br/><p>Есть бюджет на обучение и конференции.</p>",
+   "key_skills": [
+    {
+     "name": "PostgreSQL"
+    },
+    {
+     "name": "ClickHouse"
+    },
+    {
+     "name": "Docker"
+    },
+    {
+     "name": "Python"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000026",
+   "premium": false,
+   "name": "Инженер LLM-решений",
+   "area": {
+    "id": "1",
+    "name": "Москва",
+    "url": "https://api.hh.ru/areas/1"
+   },
+   "salary": {
+    "from": 160000,
+    "to": 240000,
+    "currency": "RUR",
+    "gross": false
+   },
+   "salary_range": {
+    "from": 160000,
+    "to": 240000,
+    "currency": "RUR",
+    "gross": false,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-13T09:45:00+0300",
+   "created_at": "2026-08-13T09:45:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000026",
+   "alternate_url": "https://hh.ru/vacancy/900000026",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000026",
+   "relations": [],
+   "employer": {
+    "id": "8100005",
+    "name": "Мосты Финтех",
+    "url": "https://api.hh.ru/employers/8100005",
+    "alternate_url": "https://hh.ru/employer/8100005",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100005",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between3And6",
+    "name": "От 3 до 6 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>«Мосты Финтех» расширяет команду разработки: нужен человек на задачи ниже.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Собирать RAG-пайплайны поверх корпоративной базы знаний</li><li>Встраивать языковые модели во внутренние процессы компании</li><li>Подключать модели к внешним инструментам через функции и MCP</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Python на уровне продакшен-кода, а не блокнотов</li><li>Знакомство с векторным поиском: pgvector, Qdrant или аналоги</li></ul><br/><p>Гибрид: два дня в офисе, остальное из дома.</p>",
+   "key_skills": [
+    {
+     "name": "OpenAI API"
+    },
+    {
+     "name": "Docker"
+    },
+    {
+     "name": "LangChain"
+    },
+    {
+     "name": "RAG"
+    },
+    {
+     "name": "LLM"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000004",
+   "premium": false,
+   "name": "Разработчик чат-ботов",
+   "area": {
+    "id": "3",
+    "name": "Екатеринбург",
+    "url": "https://api.hh.ru/areas/3"
+   },
+   "salary": null,
+   "salary_range": null,
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-11T18:12:00+0300",
+   "created_at": "2026-08-11T18:12:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000004",
+   "alternate_url": "https://hh.ru/vacancy/900000004",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000004",
+   "relations": [],
+   "employer": {
+    "id": "8100010",
+    "name": "Речной Порт Групп",
+    "url": "https://api.hh.ru/employers/8100010",
+    "alternate_url": "https://hh.ru/employer/8100010",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100010",
+    "accredited_it_employer": false,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "noExperience",
+    "name": "Нет опыта"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>«Речной Порт Групп» расширяет команду разработки: нужен человек на задачи ниже.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Собирать метрики: сколько вопросов бот закрыл сам</li><li>Подключать к ботам языковые модели и базу знаний компании</li><li>Разрабатывать ботов для поддержки клиентов и внутренних заявок</li><li>Держать состояние диалога и переводить сложные случаи на оператора</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Понимание, чем бот с сценарием отличается от бота с моделью</li><li>PostgreSQL или Redis для хранения состояния</li><li>Python и asyncio, опыт с aiogram или telebot</li></ul><br/><p>Оформление по ТК, ДМС после испытательного срока.</p>",
+   "key_skills": [
+    {
+     "name": "aiogram"
+    },
+    {
+     "name": "Python"
+    },
+    {
+     "name": "Redis"
+    },
+    {
+     "name": "Telegram Bot API"
+    },
+    {
+     "name": "Docker"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000018",
+   "premium": false,
+   "name": "Инженер ML-инфраструктуры",
+   "area": {
+    "id": "66",
+    "name": "Нижний Новгород",
+    "url": "https://api.hh.ru/areas/66"
+   },
+   "salary": {
+    "from": 350000,
+    "to": 420000,
+    "currency": "RUR",
+    "gross": false
+   },
+   "salary_range": {
+    "from": 350000,
+    "to": 420000,
+    "currency": "RUR",
+    "gross": false,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-11T17:12:00+0300",
+   "created_at": "2026-08-11T17:12:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000018",
+   "alternate_url": "https://hh.ru/vacancy/900000018",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000018",
+   "relations": [],
+   "employer": {
+    "id": "8100014",
+    "name": "Сфера Медиа",
+    "url": "https://api.hh.ru/employers/8100014",
+    "alternate_url": "https://hh.ru/employer/8100014",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100014",
+    "accredited_it_employer": false,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "moreThan6",
+    "name": "Более 6 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>Компания «Сфера Медиа» ищет специалиста в команду внутренней автоматизации.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Настраивать сборку, тесты и выкладку через CI</li><li>Заворачивать модели в сервисы и выкатывать их в кластер</li><li>Держать воспроизводимость экспериментов и версионирование весов</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Опыт с очередями и мониторингом</li><li>Python и понимание жизненного цикла модели</li></ul><br/><p>Оформление по ТК, ДМС после испытательного срока.</p>",
+   "key_skills": [
+    {
+     "name": "MLflow"
+    },
+    {
+     "name": "Linux"
+    },
+    {
+     "name": "Docker"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000033",
+   "premium": false,
+   "name": "RPA-разработчик",
+   "area": {
+    "id": "3",
+    "name": "Екатеринбург",
+    "url": "https://api.hh.ru/areas/3"
+   },
+   "salary": null,
+   "salary_range": null,
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-11T10:15:00+0300",
+   "created_at": "2026-08-11T10:15:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000033",
+   "alternate_url": "https://hh.ru/vacancy/900000033",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000033",
+   "relations": [],
+   "employer": {
+    "id": "8100013",
+    "name": "Прайм Логистика",
+    "url": "https://api.hh.ru/employers/8100013",
+    "alternate_url": "https://hh.ru/employer/8100013",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100013",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between3And6",
+    "name": "От 3 до 6 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>Компания «Прайм Логистика» ищет специалиста в команду внутренней автоматизации.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Разбирать входящие документы и переносить данные между системами</li><li>Роботизировать рутину бухгалтерии и кадрового учёта</li><li>Поддерживать роботов, когда интерфейсы систем меняются</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Python, работа с таблицами и документами</li><li>Внимание к краевым случаям: робот не догадается, человек догадается</li><li>Опыт с RPA-платформами или собственными скриптами</li></ul><br/><p>Офис в центре, но на удалёнку отпускаем без вопросов.</p>",
+   "key_skills": [
+    {
+     "name": "Python"
+    },
+    {
+     "name": "RPA"
+    },
+    {
+     "name": "SQL"
+    },
+    {
+     "name": "1С"
+    },
+    {
+     "name": "Selenium"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000042",
+   "premium": false,
+   "name": "Инженер ML-инфраструктуры",
+   "area": {
+    "id": "76",
+    "name": "Ростов-на-Дону",
+    "url": "https://api.hh.ru/areas/76"
+   },
+   "salary": {
+    "from": 380000,
+    "to": null,
+    "currency": "RUR",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 380000,
+    "to": null,
+    "currency": "RUR",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-10T18:00:00+0300",
+   "created_at": "2026-08-10T18:00:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000042",
+   "alternate_url": "https://hh.ru/vacancy/900000042",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000042",
+   "relations": [],
+   "employer": {
+    "id": "8100002",
+    "name": "Полярис Ритейл",
+    "url": "https://api.hh.ru/employers/8100002",
+    "alternate_url": "https://hh.ru/employer/8100002",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100002",
+    "accredited_it_employer": false,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between3And6",
+    "name": "От 3 до 6 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>Мы в «Полярис Ритейл» строим внутренние сервисы и ищем человека, который их разовьёт.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Отвечать за доступность инференса под нагрузкой</li><li>Держать воспроизводимость экспериментов и версионирование весов</li><li>Настраивать сборку, тесты и выкладку через CI</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Python и понимание жизненного цикла модели</li><li>Kubernetes на уровне эксплуатации, а не курсов</li></ul><br/><p>Небольшая команда, решения принимаются за день, а не за квартал.</p>",
+   "key_skills": [
+    {
+     "name": "MLflow"
+    },
+    {
+     "name": "Kubernetes"
+    },
+    {
+     "name": "Terraform"
+    },
+    {
+     "name": "Python"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000027",
+   "premium": false,
+   "name": "Специалист по сопровождению интеграций",
+   "area": {
+    "id": "76",
+    "name": "Ростов-на-Дону",
+    "url": "https://api.hh.ru/areas/76"
+   },
+   "salary": {
+    "from": 110000,
+    "to": 160000,
+    "currency": "RUR",
+    "gross": false
+   },
+   "salary_range": {
+    "from": 110000,
+    "to": 160000,
+    "currency": "RUR",
+    "gross": false,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-10T11:00:00+0300",
+   "created_at": "2026-08-10T11:00:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000027",
+   "alternate_url": "https://hh.ru/vacancy/900000027",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000027",
+   "relations": [],
+   "employer": {
+    "id": "8100003",
+    "name": "Сигма Практика",
+    "url": "https://api.hh.ru/employers/8100003",
+    "alternate_url": "https://hh.ru/employer/8100003",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100003",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>«Сигма Практика» расширяет команду разработки: нужен человек на задачи ниже.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Восстанавливать работу выгрузок после сбоев и разбирать причины</li><li>Приводить в порядок то, что собрано наспех и держится на костылях</li><li>Дорабатывать существующие процессы под новые требования отделов</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Умение читать логи и воспроизводить ошибку по описанию пользователя</li><li>Готовность работать с легаси, а не переписывать всё с нуля</li></ul><br/><p>Небольшая команда, решения принимаются за день, а не за квартал.</p>",
+   "key_skills": [
+    {
+     "name": "Git"
+    },
+    {
+     "name": "Python"
+    },
+    {
+     "name": "Docker"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000010",
+   "premium": false,
+   "name": "Продуктовый аналитик",
+   "area": {
+    "id": "4",
+    "name": "Новосибирск",
+    "url": "https://api.hh.ru/areas/4"
+   },
+   "salary": null,
+   "salary_range": null,
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-08T18:00:00+0300",
+   "created_at": "2026-08-08T18:00:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000010",
+   "alternate_url": "https://hh.ru/vacancy/900000010",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000010",
+   "relations": [],
+   "employer": {
+    "id": "8100007",
+    "name": "Оникс Телеком",
+    "url": "https://api.hh.ru/employers/8100007",
+    "alternate_url": "https://hh.ru/employer/8100007",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100007",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "noExperience",
+    "name": "Нет опыта"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>В «Оникс Телеком» набирается объём ручной работы, который пора автоматизировать.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Оценивать эффект автоматизации до и после внедрения</li><li>Собирать дашборды, на которые смотрит руководитель, а не аналитик</li><li>Считать метрики процессов и показывать, где теряется время</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>SQL уверенно, Python на уровне pandas</li><li>Умение задать вопрос данным раньше, чем строить график</li></ul><br/><p>Небольшая команда, решения принимаются за день, а не за квартал.</p>",
+   "key_skills": [
+    {
+     "name": "SQL"
+    },
+    {
+     "name": "Excel"
+    },
+    {
+     "name": "Pandas"
+    },
+    {
+     "name": "Python"
+    },
+    {
+     "name": "BI"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000035",
+   "premium": false,
+   "name": "ML-инженер (NLP)",
+   "area": {
+    "id": "76",
+    "name": "Ростов-на-Дону",
+    "url": "https://api.hh.ru/areas/76"
+   },
+   "salary": null,
+   "salary_range": null,
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-07T11:45:00+0300",
+   "created_at": "2026-08-07T11:45:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000035",
+   "alternate_url": "https://hh.ru/vacancy/900000035",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000035",
+   "relations": [],
+   "employer": {
+    "id": "8100013",
+    "name": "Прайм Логистика",
+    "url": "https://api.hh.ru/employers/8100013",
+    "alternate_url": "https://hh.ru/employer/8100013",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100013",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between3And6",
+    "name": "От 3 до 6 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>«Прайм Логистика» расширяет команду разработки: нужен человек на задачи ниже.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Мерить качество на отложенной выборке и не обманывать себя метрикой</li><li>Обучать и дообучать модели под задачи классификации обращений</li><li>Готовить и чистить обучающие выборки</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Понимание, чем валидация отличается от теста</li><li>Опыт с трансформерами для русского языка</li><li>Python и PyTorch</li></ul><br/><p>Небольшая команда, решения принимаются за день, а не за квартал.</p>",
+   "key_skills": [
+    {
+     "name": "Docker"
+    },
+    {
+     "name": "SQL"
+    },
+    {
+     "name": "NLP"
+    },
+    {
+     "name": "Transformers"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000031",
+   "premium": false,
+   "name": "Разработчик интеграций CRM",
+   "area": {
+    "id": "4",
+    "name": "Новосибирск",
+    "url": "https://api.hh.ru/areas/4"
+   },
+   "salary": {
+    "from": 80000,
+    "to": 130000,
+    "currency": "RUR",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 80000,
+    "to": 130000,
+    "currency": "RUR",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-06T12:15:00+0300",
+   "created_at": "2026-08-06T12:15:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000031",
+   "alternate_url": "https://hh.ru/vacancy/900000031",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000031",
+   "relations": [],
+   "employer": {
+    "id": "8100001",
+    "name": "Кедр Диджитал",
+    "url": "https://api.hh.ru/employers/8100001",
+    "alternate_url": "https://hh.ru/employer/8100001",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100001",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>В «Кедр Диджитал» набирается объём ручной работы, который пора автоматизировать.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Настраивать воронки, поля и права в CRM под процессы отдела продаж</li><li>Переносить данные из старых систем без потерь</li><li>Писать обработчики вебхуков для нестандартных сценариев</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>REST API и вебхуки на практике</li><li>Опыт внедрения amoCRM или Битрикс24</li><li>PHP или Python для обработчиков</li></ul><br/><p>Есть бюджет на обучение и конференции.</p>",
+   "key_skills": [
+    {
+     "name": "Python"
+    },
+    {
+     "name": "REST API"
+    },
+    {
+     "name": "Webhook"
+    },
+    {
+     "name": "Битрикс24"
+    },
+    {
+     "name": "PHP"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000016",
+   "premium": false,
+   "name": "Разработчик чат-ботов",
+   "area": {
+    "id": "76",
+    "name": "Ростов-на-Дону",
+    "url": "https://api.hh.ru/areas/76"
+   },
+   "salary": {
+    "from": 1555,
+    "to": 2444,
+    "currency": "USD",
+    "gross": false
+   },
+   "salary_range": {
+    "from": 1555,
+    "to": 2444,
+    "currency": "USD",
+    "gross": false,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-06T09:15:00+0300",
+   "created_at": "2026-08-06T09:15:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000016",
+   "alternate_url": "https://hh.ru/vacancy/900000016",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000016",
+   "relations": [],
+   "employer": {
+    "id": "8100014",
+    "name": "Сфера Медиа",
+    "url": "https://api.hh.ru/employers/8100014",
+    "alternate_url": "https://hh.ru/employer/8100014",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100014",
+    "accredited_it_employer": false,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "noExperience",
+    "name": "Нет опыта"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>В «Сфера Медиа» набирается объём ручной работы, который пора автоматизировать.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Разрабатывать ботов для поддержки клиентов и внутренних заявок</li><li>Держать состояние диалога и переводить сложные случаи на оператора</li><li>Собирать метрики: сколько вопросов бот закрыл сам</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>PostgreSQL или Redis для хранения состояния</li><li>Понимание, чем бот с сценарием отличается от бота с моделью</li></ul><br/><p>Испытательный срок — два месяца, зарплата на нём не режется.</p>",
+   "key_skills": [
+    {
+     "name": "Telegram Bot API"
+    },
+    {
+     "name": "PostgreSQL"
+    },
+    {
+     "name": "Redis"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000034",
+   "premium": false,
+   "name": "Аналитик данных (с AI-инструментами)",
+   "area": {
+    "id": "66",
+    "name": "Нижний Новгород",
+    "url": "https://api.hh.ru/areas/66"
+   },
+   "salary": {
+    "from": 180000,
+    "to": 230000,
+    "currency": "RUR",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 180000,
+    "to": 230000,
+    "currency": "RUR",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-05T18:12:00+0300",
+   "created_at": "2026-08-05T18:12:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000034",
+   "alternate_url": "https://hh.ru/vacancy/900000034",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000034",
+   "relations": [],
+   "employer": {
+    "id": "8100002",
+    "name": "Полярис Ритейл",
+    "url": "https://api.hh.ru/employers/8100002",
+    "alternate_url": "https://hh.ru/employer/8100002",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100002",
+    "accredited_it_employer": false,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>«Полярис Ритейл» расширяет команду разработки: нужен человек на задачи ниже.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Собирать дашборды, на которые смотрит руководитель, а не аналитик</li><li>Считать метрики процессов и показывать, где теряется время</li><li>Оценивать эффект автоматизации до и после внедрения</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>SQL уверенно, Python на уровне pandas</li><li>Умение задать вопрос данным раньше, чем строить график</li></ul><br/><p>Испытательный срок — два месяца, зарплата на нём не режется.</p>",
+   "key_skills": [
+    {
+     "name": "BI"
+    },
+    {
+     "name": "SQL"
+    },
+    {
+     "name": "Excel"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000024",
+   "premium": false,
+   "name": "Специалист по работе с LLM",
+   "area": {
+    "id": "76",
+    "name": "Ростов-на-Дону",
+    "url": "https://api.hh.ru/areas/76"
+   },
+   "salary": {
+    "from": 160000,
+    "to": 240000,
+    "currency": "RUR",
+    "gross": false
+   },
+   "salary_range": {
+    "from": 160000,
+    "to": 240000,
+    "currency": "RUR",
+    "gross": false,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-05T11:12:00+0300",
+   "created_at": "2026-08-05T11:12:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000024",
+   "alternate_url": "https://hh.ru/vacancy/900000024",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000024",
+   "relations": [],
+   "employer": {
+    "id": "8100007",
+    "name": "Оникс Телеком",
+    "url": "https://api.hh.ru/employers/8100007",
+    "alternate_url": "https://hh.ru/employer/8100007",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100007",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "noExperience",
+    "name": "Нет опыта"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>Мы в «Оникс Телеком» строим внутренние сервисы и ищем человека, который их разовьёт.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Писать и отлаживать промпты для внутренних сценариев</li><li>Обучать коллег пользоваться готовыми сценариями</li><li>Собирать наборы примеров и проверять на них ответы модели</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Базовый Python — плюс, но не обязателен</li><li>Аккуратность в формулировках и умение мерить результат</li><li>Опыт работы с языковыми моделями в рабочих задачах</li></ul><br/><p>Небольшая команда, решения принимаются за день, а не за квартал.</p>",
+   "key_skills": [
+    {
+     "name": "Промпт-инжиниринг"
+    },
+    {
+     "name": "Python"
+    },
+    {
+     "name": "LLM"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000044",
+   "premium": false,
+   "name": "Разработчик внутренних сервисов",
+   "area": {
+    "id": "1",
+    "name": "Москва",
+    "url": "https://api.hh.ru/areas/1"
+   },
+   "salary": {
+    "from": 150000,
+    "to": 200000,
+    "currency": "RUR",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 150000,
+    "to": 200000,
+    "currency": "RUR",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-04T19:00:00+0300",
+   "created_at": "2026-08-04T19:00:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000044",
+   "alternate_url": "https://hh.ru/vacancy/900000044",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000044",
+   "relations": [],
+   "employer": {
+    "id": "8100013",
+    "name": "Прайм Логистика",
+    "url": "https://api.hh.ru/employers/8100013",
+    "alternate_url": "https://hh.ru/employer/8100013",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100013",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between3And6",
+    "name": "От 3 до 6 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>В «Прайм Логистика» набирается объём ручной работы, который пора автоматизировать.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Покрывать код тестами и держать их зелёными</li><li>Разрабатывать сервисы, на которые опираются внутренние автоматизации</li><li>Разбирать инциденты на проде вместе с командой</li><li>Проектировать схему базы и писать миграции</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Docker и понимание, как код доезжает до сервера</li><li>PostgreSQL: индексы, транзакции, планы запросов</li></ul><br/><p>Небольшая команда, решения принимаются за день, а не за квартал.</p>",
+   "key_skills": [
+    {
+     "name": "Docker"
+    },
+    {
+     "name": "PostgreSQL"
+    },
+    {
+     "name": "FastAPI"
+    },
+    {
+     "name": "Git"
+    },
+    {
+     "name": "REST API"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000028",
+   "premium": false,
+   "name": "Инженер диалоговых сервисов",
+   "area": {
+    "id": "3",
+    "name": "Екатеринбург",
+    "url": "https://api.hh.ru/areas/3"
+   },
+   "salary": {
+    "from": 200000,
+    "to": 230000,
+    "currency": "RUR",
+    "gross": false
+   },
+   "salary_range": {
+    "from": 200000,
+    "to": 230000,
+    "currency": "RUR",
+    "gross": false,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-03T19:45:00+0300",
+   "created_at": "2026-08-03T19:45:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000028",
+   "alternate_url": "https://hh.ru/vacancy/900000028",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000028",
+   "relations": [],
+   "employer": {
+    "id": "8100009",
+    "name": "Лига Образования",
+    "url": "https://api.hh.ru/employers/8100009",
+    "alternate_url": "https://hh.ru/employer/8100009",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100009",
+    "accredited_it_employer": false,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "noExperience",
+    "name": "Нет опыта"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>«Лига Образования» расширяет команду разработки: нужен человек на задачи ниже.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Держать состояние диалога и переводить сложные случаи на оператора</li><li>Подключать к ботам языковые модели и базу знаний компании</li><li>Разрабатывать ботов для поддержки клиентов и внутренних заявок</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Python и asyncio, опыт с aiogram или telebot</li><li>PostgreSQL или Redis для хранения состояния</li><li>Понимание, чем бот с сценарием отличается от бота с моделью</li></ul><br/><p>Оформление по ТК, ДМС после испытательного срока.</p>",
+   "key_skills": [
+    {
+     "name": "Redis"
+    },
+    {
+     "name": "Python"
+    },
+    {
+     "name": "aiogram"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000030",
+   "premium": false,
+   "name": "MLOps-инженер",
+   "area": {
+    "id": "3",
+    "name": "Екатеринбург",
+    "url": "https://api.hh.ru/areas/3"
+   },
+   "salary": {
+    "from": 360000,
+    "to": 440000,
+    "currency": "RUR",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 360000,
+    "to": 440000,
+    "currency": "RUR",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-02T11:00:00+0300",
+   "created_at": "2026-08-02T11:00:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000030",
+   "alternate_url": "https://hh.ru/vacancy/900000030",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000030",
+   "relations": [],
+   "employer": {
+    "id": "8100003",
+    "name": "Сигма Практика",
+    "url": "https://api.hh.ru/employers/8100003",
+    "alternate_url": "https://hh.ru/employer/8100003",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100003",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "moreThan6",
+    "name": "Более 6 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>«Сигма Практика» расширяет команду разработки: нужен человек на задачи ниже.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Настраивать сборку, тесты и выкладку через CI</li><li>Заворачивать модели в сервисы и выкатывать их в кластер</li><li>Держать воспроизводимость экспериментов и версионирование весов</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Python и понимание жизненного цикла модели</li><li>Kubernetes на уровне эксплуатации, а не курсов</li></ul><br/><p>Гибрид: два дня в офисе, остальное из дома.</p>",
+   "key_skills": [
+    {
+     "name": "CI/CD"
+    },
+    {
+     "name": "Python"
+    },
+    {
+     "name": "Linux"
+    },
+    {
+     "name": "Terraform"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000009",
+   "premium": false,
+   "name": "Инженер роботизации процессов",
+   "area": {
+    "id": "3",
+    "name": "Екатеринбург",
+    "url": "https://api.hh.ru/areas/3"
+   },
+   "salary": {
+    "from": 160000,
+    "to": null,
+    "currency": "RUR",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 160000,
+    "to": null,
+    "currency": "RUR",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-08-01T13:45:00+0300",
+   "created_at": "2026-08-01T13:45:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000009",
+   "alternate_url": "https://hh.ru/vacancy/900000009",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000009",
+   "relations": [],
+   "employer": {
+    "id": "8100013",
+    "name": "Прайм Логистика",
+    "url": "https://api.hh.ru/employers/8100013",
+    "alternate_url": "https://hh.ru/employer/8100013",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100013",
+    "accredited_it_employer": true,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>Компания «Прайм Логистика» ищет специалиста в команду внутренней автоматизации.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Разбирать входящие документы и переносить данные между системами</li><li>Роботизировать рутину бухгалтерии и кадрового учёта</li><li>Поддерживать роботов, когда интерфейсы систем меняются</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Внимание к краевым случаям: робот не догадается, человек догадается</li><li>Опыт с RPA-платформами или собственными скриптами</li><li>Python, работа с таблицами и документами</li></ul><br/><p>Испытательный срок — два месяца, зарплата на нём не режется.</p>",
+   "key_skills": [
+    {
+     "name": "Python"
+    },
+    {
+     "name": "SQL"
+    },
+    {
+     "name": "RPA"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000037",
+   "premium": false,
+   "name": "Разработчик интеграций n8n",
+   "area": {
+    "id": "4",
+    "name": "Новосибирск",
+    "url": "https://api.hh.ru/areas/4"
+   },
+   "salary": {
+    "from": 120000,
+    "to": null,
+    "currency": "RUR",
+    "gross": false
+   },
+   "salary_range": {
+    "from": 120000,
+    "to": null,
+    "currency": "RUR",
+    "gross": false,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-07-31T19:00:00+0300",
+   "created_at": "2026-07-31T19:00:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000037",
+   "alternate_url": "https://hh.ru/vacancy/900000037",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000037",
+   "relations": [],
+   "employer": {
+    "id": "8100009",
+    "name": "Лига Образования",
+    "url": "https://api.hh.ru/employers/8100009",
+    "alternate_url": "https://hh.ru/employer/8100009",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100009",
+    "accredited_it_employer": false,
+    "trusted": true
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "remote",
+    "name": "Удаленная работа"
+   },
+   "work_format": [
+    {
+     "id": "REMOTE",
+     "name": "Удалённо"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>Компания «Лига Образования» ищет специалиста в команду внутренней автоматизации.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Подключать внутренние сервисы по REST API и вебхукам</li><li>Писать кастомные ноды на TypeScript, когда готовых не хватает</li><li>Переносить существующие сценарии с Make на self-hosted n8n</li><li>Следить за очередями и разбирать упавшие запуски</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Понимание REST, вебхуков и авторизации по токену</li><li>Опыт с n8n, Make или Zapier от полугода</li></ul><br/><p>Небольшая команда, решения принимаются за день, а не за квартал.</p>",
+   "key_skills": [
+    {
+     "name": "n8n"
+    },
+    {
+     "name": "Docker"
+    },
+    {
+     "name": "REST API"
+    },
+    {
+     "name": "Python"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  },
+  {
+   "id": "900000046",
+   "premium": false,
+   "name": "Аналитик автоматизации",
+   "area": {
+    "id": "4",
+    "name": "Новосибирск",
+    "url": "https://api.hh.ru/areas/4"
+   },
+   "salary": {
+    "from": 110000,
+    "to": null,
+    "currency": "RUR",
+    "gross": true
+   },
+   "salary_range": {
+    "from": 110000,
+    "to": null,
+    "currency": "RUR",
+    "gross": true,
+    "mode": {
+     "id": "MONTH",
+     "name": "За месяц"
+    },
+    "frequency": null
+   },
+   "type": {
+    "id": "open",
+    "name": "Открытая"
+   },
+   "address": null,
+   "published_at": "2026-07-31T18:15:00+0300",
+   "created_at": "2026-07-31T18:15:00+0300",
+   "archived": false,
+   "url": "https://api.hh.ru/vacancies/900000046",
+   "alternate_url": "https://hh.ru/vacancy/900000046",
+   "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=900000046",
+   "relations": [],
+   "employer": {
+    "id": "8100008",
+    "name": "Дельта Букинг",
+    "url": "https://api.hh.ru/employers/8100008",
+    "alternate_url": "https://hh.ru/employer/8100008",
+    "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8100008",
+    "accredited_it_employer": false,
+    "trusted": false
+   },
+   "contacts": null,
+   "schedule": {
+    "id": "fullDay",
+    "name": "Полный день"
+   },
+   "work_format": [
+    {
+     "id": "ON_SITE",
+     "name": "На месте работодателя"
+    }
+   ],
+   "professional_roles": [
+    {
+     "id": "96",
+     "name": "Программист, разработчик"
+    }
+   ],
+   "experience": {
+    "id": "between1And3",
+    "name": "От 1 года до 3 лет"
+   },
+   "employment": {
+    "id": "full",
+    "name": "Полная занятость"
+   },
+   "description": "<p>Мы в «Дельта Букинг» строим внутренние сервисы и ищем человека, который их разовьёт.</p> <p><strong>Чем предстоит заниматься:</strong></p> <ul><li>Считать метрики процессов и показывать, где теряется время</li><li>Оценивать эффект автоматизации до и после внедрения</li><li>Собирать дашборды, на которые смотрит руководитель, а не аналитик</li></ul> <p><strong>Ждём от вас:</strong></p> <ul><li>Умение задать вопрос данным раньше, чем строить график</li><li>SQL уверенно, Python на уровне pandas</li></ul><br/><p>Небольшая команда, решения принимаются за день, а не за квартал.</p>",
+   "key_skills": [
+    {
+     "name": "Python"
+    },
+    {
+     "name": "Pandas"
+    },
+    {
+     "name": "BI"
+    },
+    {
+     "name": "SQL"
+    }
+   ],
+   "accept_handicapped": false,
+   "accept_kids": false,
+   "languages": []
+  }
+ ],
+ "found": 48,
+ "pages": 1,
+ "page": 0,
+ "per_page": 48
+}
