@@ -1,0 +1,33 @@
+# --- local secrets and personal data ---
+.env
+profile.yaml
+profile.local.yaml
+*.token.json
+.hh-token-cache.json
+
+# --- python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+dist/
+build/
+
+# --- models / data / dumps ---
+.fastembed_cache/
+data/
+*.dump
+*.sql.gz
+
+# --- editors / os ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
