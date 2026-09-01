@@ -27,6 +27,19 @@ app = typer.Typer(
 )
 console = Console()
 
+
+def echo_raw(text: str) -> None:
+    """Напечатать текст как есть, без вмешательства Rich.
+
+    Rich по умолчанию считает квадратные скобки разметкой и переносит длинные
+    строки по ширине терминала. На обычных сообщениях это удобно, а на готовом
+    тексте — порча: из отчёта оценки пропадала пометка метода (``[fulltext]``
+    съедалось как тег стиля), а JSON для Claude Desktop ломался переносом
+    посреди пути к интерпретатору.
+    """
+    console.print(text, markup=False, highlight=False, soft_wrap=True)
+
+
 #: Запросы по умолчанию — домен, ради которого проект и написан.
 #: Список осознанно широкий: смежные формулировки ловят вакансии,
 #: которые под точным «AI-инженер» не находятся.
@@ -106,7 +119,7 @@ def ingest(
         raise typer.Exit(code=2) from exc
 
     for line in report.as_lines():
-        console.print(line)
+        echo_raw(line)
     if report.errors:
         console.print(f"[yellow]ошибок при дозагрузке: {len(report.errors)}[/yellow]")
 
@@ -124,7 +137,7 @@ def details(
     with HHClient() as client, session_scope() as session:
         report = fetch_missing_details(session, client, limit=limit)
     for line in report.as_lines():
-        console.print(line)
+        echo_raw(line)
 
 
 @app.command()
@@ -221,7 +234,7 @@ def evaluate(
         Path(output).write_text(rendered, encoding="utf-8")
         console.print(f"отчёт записан: {output}")
     else:
-        console.print(rendered)
+        echo_raw(rendered)
 
 
 @app.command()
@@ -255,7 +268,7 @@ def explain(
         plan = [row[0] for row in session.execute(sql, {"q": query})]
 
     for line in plan:
-        console.print(line)
+        echo_raw(line)
 
     console.print("")
     joined = " ".join(plan)
@@ -345,7 +358,7 @@ def mcp_config(
 
     if not write:
         console.print(f"[dim]Файл конфигурации: {target}[/dim]")
-        console.print(render_snippet())
+        echo_raw(render_snippet())
         console.print("")
         console.print("[dim]Вписать автоматически: hh-radar mcp-config --write[/dim]")
         return
