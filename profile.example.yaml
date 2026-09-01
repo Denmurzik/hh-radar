@@ -1,0 +1,63 @@
+# Профиль кандидата для инструмента compare_to_profile.
+#
+# Скопируйте этот файл в profile.yaml и заполните своими данными.
+# profile.yaml в .gitignore — он никогда не попадёт в репозиторий.
+#
+# Смысл файла: агент должен уметь честно сказать «сюда не проходишь и вот почему»,
+# а не только «вот десять вакансий». Для этого ему нужно знать не только то,
+# что вы умеете, но и то, чего вы НЕ умеете, и что для вас стоп-фактор.
+
+title: Backend-разработчик
+
+experience_years: 2.0
+
+# Навыки, которые вы готовы защищать на техническом собеседовании.
+# level: strong | working | basic
+skills:
+  - name: python
+    level: strong
+  - name: postgresql
+    level: working
+  - name: docker
+    level: working
+  - name: git
+    level: strong
+  - name: rest api
+    level: strong
+  - name: fastapi
+    level: working
+  - name: sql
+    level: basic
+
+# Технологии, которых у вас нет. Указывайте явно: это не слабость профиля,
+# а то, что превращает выдачу из «100 вакансий» в «7 вакансий, куда стоит писать».
+missing:
+  - kubernetes
+  - go
+  - kafka
+  - machine learning
+  - c++
+
+# Жёсткие ограничения. Если вакансия им противоречит — verdict будет "no".
+constraints:
+  salary_min_rub: 100000          # ниже этого не рассматриваем
+  remote_only: true               # только удалённо
+  relocation: false
+  employment:                     # допустимые типы занятости (id из hh)
+    - full
+    - part
+  min_experience_accepted: between1And3   # выше этого требования не проходим
+  english_speaking: false         # готов ли к собеседованию на английском
+
+# Слова, встреча которых в вакансии — стоп-сигнал (регистр не важен).
+red_flags:
+  - 1С
+  - PHP
+  - выезд в офис
+  - командировки
+
+# Слова, которые повышают приоритет вакансии.
+green_flags:
+  - наставник
+  - без легаси
+  - гибкий график
