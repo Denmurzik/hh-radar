@@ -87,7 +87,7 @@ class TestRenderPage:
         page = _page()
         assert "cdn." not in page
         assert "<script src=" not in page
-        assert "<link rel=\"stylesheet\"" not in page
+        assert '<link rel="stylesheet"' not in page
 
     def test_every_bar_is_labelled_with_its_value(self) -> None:
         """Требование доступности: значение несёт подпись, а не цвет полосы."""
