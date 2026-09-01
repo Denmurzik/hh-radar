@@ -176,9 +176,7 @@ class Vacancy(Base):
         ),
     )
 
-    skills: Mapped[list[Skill]] = relationship(
-        secondary=vacancy_skills, back_populates="vacancies"
-    )
+    skills: Mapped[list[Skill]] = relationship(secondary=vacancy_skills, back_populates="vacancies")
     chunks: Mapped[list[VacancyChunk]] = relationship(
         back_populates="vacancy", cascade="all, delete-orphan", passive_deletes=True
     )

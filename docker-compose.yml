@@ -6,9 +6,10 @@ services:
       POSTGRES_USER: hh
       POSTGRES_PASSWORD: hh
       POSTGRES_DB: hh_radar
-      # Русская морфология в полнотекстовом поиске работает через словарь russian,
-      # который есть в стандартной сборке. Локаль нужна для корректной сортировки.
-      LANG: ru_RU.utf8
+      # C.UTF-8, а не ru_RU.utf8: русской локали в образе нет, и она здесь не нужна.
+      # Словарь russian для to_tsvector — это snowball-стеммер внутри Postgres,
+      # он не зависит от локали операционной системы.
+      POSTGRES_INITDB_ARGS: "--locale=C.UTF-8 --encoding=UTF8"
     # 5433 снаружи: чтобы не конфликтовать с локально установленным Postgres.
     ports:
       - "5433:5432"

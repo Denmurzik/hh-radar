@@ -1,0 +1,113 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # В CI эмбеддинги считает детерминированная заглушка: качать 220 МБ ONNX-модель
+  # на каждый пуш незачем, а проверить проводку кода она позволяет полностью.
+  EMBEDDING_BACKEND: hash
+
+jobs:
+  lint:
+    name: линтер и типы
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Установить uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Поставить зависимости
+        run: uv sync --extra dev
+
+      - name: ruff check
+        run: uv run ruff check src tests migrations
+
+      - name: ruff format --check
+        run: uv run ruff format --check src tests
+
+      - name: mypy
+        run: uv run mypy
+
+  test:
+    name: тесты (py${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12"]
+
+    services:
+      postgres:
+        # Тот же образ, что в docker-compose: тесты должны падать здесь,
+        # а не на машине разработчика.
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_USER: hh
+          POSTGRES_PASSWORD: hh
+          POSTGRES_DB: hh_radar
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U hh -d hh_radar"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+
+    env:
+      DATABASE_URL: postgresql+psycopg://hh:hh@localhost:5433/hh_radar
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Установить uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          python-version: ${{ matrix.python }}
+
+      - name: Поставить зависимости
+        run: uv sync --extra dev
+
+      - name: Применить миграции
+        # Расширение vector создаёт сама миграция: service container
+        # init-скрипты из репозитория не подхватывает.
+        run: uv run alembic upgrade head
+
+      - name: Проверить, что схема совпадает с моделями
+        # Ловит ситуацию «модель поменяли, миграцию забыли».
+        run: uv run alembic check
+
+      - name: Тесты
+        run: uv run pytest -q --cov=hh_radar --cov-report=term-missing
+
+  smoke:
+    name: сервер поднимается
+    runs-on: ubuntu-latest
+    needs: [lint]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - run: uv sync --extra dev
+
+      - name: MCP-сервер импортируется и объявляет инструменты
+        # Дешёвая проверка того, что ломается чаще всего: сервер должен
+        # собираться без живой базы и без скачанной модели.
+        run: uv run python -c "from hh_radar.mcp_server.server import build_server; print(build_server().name)"
+
+      - name: CLI отвечает на --help
+        run: uv run hh-radar --help
