@@ -3,13 +3,13 @@ name = "hh-radar"
 version = "0.4.0"
 description = "База вакансий hh.ru с полнотекстовым и семантическим поиском, доступная LLM-агенту через MCP"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 license = { file = "LICENSE" }
 authors = [{ name = "Denis Muruev", email = "muruevden@gmail.com" }]
 keywords = ["mcp", "hh.ru", "postgresql", "pgvector", "rag", "job-search"]
 classifiers = [
-    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "License :: OSI Approved :: MIT License",
 ]
 
@@ -67,7 +67,7 @@ filterwarnings = ["error::DeprecationWarning:hh_radar.*"]
 # ------------------------------------------------------------------ ruff ----
 [tool.ruff]
 line-length = 100
-target-version = "py311"
+target-version = "py312"
 src = ["src", "tests"]
 
 [tool.ruff.lint]
@@ -85,7 +85,10 @@ ignore = [
 
 # ------------------------------------------------------------------ mypy ----
 [tool.mypy]
-python_version = "3.11"
+# 3.12, а не 3.11: стабы numpy 2.5 используют PEP 695 (`type X = ...`),
+# который mypy разбирает только начиная с 3.12. Нижняя граница проекта
+# поднята до 3.12 по той же причине.
+python_version = "3.12"
 files = ["src/hh_radar"]
 strict_optional = true
 warn_unused_ignores = true
