@@ -270,6 +270,48 @@ def showcase(
         console.print(f"записано: {path}")
 
 
+@app.command(name="mcp-config")
+def mcp_config(
+    write: Annotated[
+        bool, typer.Option("--write", help="Вписать в конфиг Claude Desktop, а не печатать.")
+    ] = False,
+    path: Annotated[
+        str | None, typer.Option(help="Нестандартный путь к claude_desktop_config.json.")
+    ] = None,
+) -> None:
+    """Показать (или вписать) настройку для Claude Desktop.
+
+    Без флага только печатает — редактировать чужой конфиг без явного
+    разрешения нельзя. С флагом сохраняет резервную копию и не трогает
+    остальные серверы в файле.
+    """
+    from pathlib import Path
+
+    from hh_radar.mcp_server.desktop import config_path, install, render_snippet
+
+    target = Path(path) if path else config_path()
+
+    if not write:
+        console.print(f"[dim]Файл конфигурации: {target}[/dim]")
+        console.print(render_snippet())
+        console.print("")
+        console.print("[dim]Вписать автоматически: hh-radar mcp-config --write[/dim]")
+        return
+
+    try:
+        result = install(target)
+    except ValueError as exc:
+        console.print(f"[red]{exc}[/red]")
+        raise typer.Exit(code=4) from exc
+
+    console.print(f"записано: {result.path}")
+    if result.backup:
+        console.print(f"резервная копия: {result.backup}")
+    if result.already_present:
+        console.print("[yellow]запись hh-radar уже была — обновлена[/yellow]")
+    console.print("Перезапустите Claude Desktop, чтобы он подхватил сервер.")
+
+
 @app.command()
 def serve() -> None:
     """Запустить MCP-сервер на stdio (так его подключает Claude Desktop)."""
